@@ -14,7 +14,7 @@ async function seed() {
   console.log('Seed startet ...');
 
   for (const recipe of seedRecipes) {
-    await sql`
+    const result = await sql`
       INSERT INTO recipes (
         title,
         original_title,
@@ -39,12 +39,19 @@ async function seed() {
         ${recipe.notes},
         ${recipe.tags}
       )
+      ON CONFLICT (original_title)
+      DO NOTHING
+      RETURNING id
     `;
 
-    console.log(`✓ ${recipe.title}`);
+    if (result.length > 0) {
+      console.log(`✓ eingefügt: ${recipe.title}`);
+    } else {
+      console.log(`↷ vorhanden: ${recipe.title}`);
+    }
   }
 
-  console.log(`Fertig: ${seedRecipes.length} Rezepte eingefügt.`);
+  console.log(`Fertig: ${seedRecipes.length} Rezepte geprüft.`);
 }
 
 seed().catch((error) => {
