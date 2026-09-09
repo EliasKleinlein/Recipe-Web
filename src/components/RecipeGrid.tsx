@@ -8,6 +8,7 @@ type Recipe = {
   duration: number;
   servings: number;
   notes: string | null;
+  image: string | null;
 };
 
 type RecipeGridProps = {
@@ -16,7 +17,7 @@ type RecipeGridProps = {
 
 export default function RecipeGrid({ recipes }: RecipeGridProps) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-7 sm:grid-cols-2 xl:grid-cols-3">
       {recipes.map((recipe) => (
         <RecipeCard
           key={recipe.id}
@@ -27,6 +28,7 @@ export default function RecipeGrid({ recipes }: RecipeGridProps) {
           duration={recipe.duration}
           servings={recipe.servings}
           notes={recipe.notes}
+          image={recipe.image}
         />
       ))}
     </div>
