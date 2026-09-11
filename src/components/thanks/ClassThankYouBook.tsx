@@ -6,20 +6,20 @@ import Image from "next/image";
 type Person = {
   id: string;
   name: string;
-  sticker: string;
+  portrait: string;
 };
 
 const people: Person[] = [
-  { id: "muju", name: "Muju", sticker: "/stickers/class/muju.png" },
-  { id: "elias", name: "Elias", sticker: "/stickers/class/elias.png" },
-  { id: "eric", name: "Eric", sticker: "/stickers/class/eric.png" },
-  { id: "marco", name: "Marco", sticker: "/stickers/class/marco.png" },
-  { id: "christoph", name: "Christoph", sticker: "/stickers/class/christoph.png" },
-  { id: "kevin", name: "Kevin", sticker: "/stickers/class/kevin.png" },
-  { id: "niko", name: "Niko", sticker: "/stickers/class/niko.png" },
-  { id: "marlin", name: "Marlin", sticker: "/stickers/class/marlin.png" },
-  { id: "daniel", name: "Daniel", sticker: "/stickers/class/daniel.png" },
-  { id: "pavel", name: "Pavel", sticker: "/stickers/class/pavel.png" },
+  { id: "muju", name: "Muju", portrait: "/images/class/muju.png" },
+  { id: "elias", name: "Elias", portrait: "/images/class/elias.png" },
+  { id: "eric", name: "Eric", portrait: "/images/class/eric.png" },
+  { id: "marco", name: "Marco", portrait: "/images/class/marco.png" },
+  { id: "christoph", name: "Christoph", portrait: "/images/class/christoph.png" },
+  { id: "kevin", name: "Kevin", portrait: "/images/class/kevin.png" },
+  { id: "niko", name: "Niko", portrait: "/images/class/niko.png" },
+  { id: "marlin", name: "Marlin", portrait: "/images/class/marlin.png" },
+  { id: "daniel", name: "Daniel", portrait: "/images/class/daniel-transparent.png" },
+  { id: "pavel", name: "Pavel", portrait: "/images/class/pavel.png" },
 ];
 
 const names = people.map((person) => person.name).join(" · ");
@@ -52,61 +52,14 @@ export default function ClassThankYouBook() {
 
   function DedicationLeft() {
     return (
-      <div className="relative flex h-full flex-col overflow-hidden bg-[#ead8b5] px-10 py-8 text-[#4c3628] sm:px-14">
-        <PaperTexture />
-
-        <div className="relative z-10 flex h-full flex-col">
-          <p className="text-center font-serif text-xl tracking-[0.22em]">
-            RENKES KOCHBUCH
-          </p>
-
-          <div className="mx-auto mt-3 h-px w-56 bg-[#76543e]/40" />
-
-          <div className="mt-5 text-center">
-            <p className="font-[cursive] text-5xl leading-none sm:text-6xl">
-              Für
-            </p>
-
-            <p className="font-[cursive] text-6xl leading-none sm:text-7xl">
-              Renke
-            </p>
-
-            <div className="mx-auto mt-4 flex w-52 items-center gap-4">
-              <div className="h-px flex-1 bg-[#76543e]/55" />
-              <span className="text-lg">♥</span>
-              <div className="h-px flex-1 bg-[#76543e]/55" />
-            </div>
-          </div>
-
-          <div className="relative mt-3 flex flex-1 items-center justify-center">
-            <div className="relative h-[470px] w-full max-w-[500px]">
-              <Image
-                src="/images/renke-steinbock-krieger.png"
-                alt="Sayer Renke Walter Malte Brixel als Zwergenkrieger auf einem Steinbock"
-                fill
-                priority
-                className="object-contain mix-blend-multiply"
-              />
-            </div>
-          </div>
-
-          <div className="mt-1 flex items-end justify-between gap-6">
-            <div className="rotate-[-3deg] font-[cursive] text-lg leading-relaxed text-[#6d503b]">
-              Guter Code.<br />
-              Gutes Essen.<br />
-              Gute Menschen. ♥
-            </div>
-
-            <div className="text-right">
-              <p className="font-mono text-base text-[#5f4736]">
-                {"{ }"}
-              </p>
-              <p className="mt-2 font-serif text-sm tracking-[0.22em]">
-                G-SEAI-8 · 2026
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="relative h-full overflow-hidden bg-[#ead8b5]">
+        <Image
+          src="/images/danke-renke-left-page.png"
+          alt="Widmungsseite Für Renke"
+          fill
+          priority
+          className="object-cover"
+        />
       </div>
     );
   }
@@ -210,16 +163,13 @@ export default function ClassThankYouBook() {
             {person.name}
           </h2>
 
-          <div className="mx-auto mt-9 flex h-72 w-72 items-center justify-center rounded-[2rem] border-2 border-dashed border-[#8a674e]/35 bg-[#f7e7c8]/45">
-            <div>
-              <div className="text-7xl grayscale">👨‍🍳</div>
-              <p className="mt-4 font-[cursive] text-2xl">
-                {person.name}-Sticker
-              </p>
-              <p className="mt-1 text-sm opacity-60">
-                kommt hier hinein
-              </p>
-            </div>
+          <div className="relative mx-auto mt-7 h-[390px] w-full max-w-[390px] overflow-hidden">
+            <Image
+              src={person.portrait}
+              alt={`${person.name} als Bleistiftzeichnung`}
+              fill
+              className="object-contain mix-blend-multiply"
+            />
           </div>
 
           <p className="mx-auto mt-9 max-w-sm font-[cursive] text-2xl leading-relaxed">
@@ -273,6 +223,55 @@ export default function ClassThankYouBook() {
     );
   }
 
+
+  function KitchenSketchDecor() {
+    return (
+      <>
+        {/* Knoblauch + Kräuter oben links */}
+        <svg
+          viewBox="0 0 180 180"
+          className="pointer-events-none absolute left-5 top-20 z-10 h-36 w-36 rotate-[-8deg] text-[#5d4938] opacity-75"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M83 39c-8 6-18 8-24 20-7 14-5 33 7 43 8 7 25 9 35 2 14-10 17-31 7-45-7-10-17-13-25-20Z" />
+          <path d="M82 39c-2-13 2-25 11-35" />
+          <path d="M68 59c10 8 17 23 16 43" />
+          <path d="M98 58c-9 10-13 25-10 44" />
+
+          <path d="M112 119c17-20 24-40 26-65" />
+          <path d="M128 84c12-7 21-13 28-23" />
+          <path d="M132 71c-10-3-16-7-22-13" />
+          <path d="M138 57c9-5 15-11 20-18" />
+
+          <path d="M50 124c-12-19-17-40-15-62" />
+          <path d="M36 92c-10-6-17-13-23-22" />
+          <path d="M37 77c10-3 17-8 23-14" />
+        </svg>
+
+        {/* Kochlöffel rechts */}
+        <svg
+          viewBox="0 0 120 420"
+          className="pointer-events-none absolute right-2 top-44 z-10 h-[390px] w-28 rotate-[9deg] text-[#5d4938] opacity-70"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <ellipse cx="60" cy="63" rx="34" ry="52" />
+          <ellipse cx="60" cy="63" rx="20" ry="36" opacity=".45" />
+          <path d="M54 112c-3 67-6 139-5 211 0 41 3 68 11 82" />
+          <path d="M66 112c4 67 7 139 6 211 0 41-4 68-12 82" />
+          <path d="M50 325c6 8 15 12 22 0" />
+        </svg>
+      </>
+    );
+  }
+
   function PaperTexture() {
     return (
       <>
@@ -308,7 +307,7 @@ export default function ClassThankYouBook() {
           className="relative mx-auto max-w-6xl"
           style={{ perspective: "2600px" }}
         >
-          <div className="relative grid min-h-[760px] overflow-hidden rounded-[24px] border-[10px] border-[#4e2d1c] bg-[#4e2d1c] shadow-[0_35px_120px_rgba(0,0,0,.75)] lg:grid-cols-2">
+          <div className="relative grid h-[760px] overflow-hidden rounded-[24px] border-[10px] border-[#4e2d1c] bg-[#4e2d1c] shadow-[0_35px_120px_rgba(0,0,0,.75)] lg:grid-cols-2">
             {page === -1 ? (
               <>
                 <DedicationLeft />
