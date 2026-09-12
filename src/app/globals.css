@@ -1,34 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --night: #07111f;
+  --night-soft: #10213a;
+  --ink: #382414;
+  --parchment: #f1ddb0;
+  --parchment-light: #fff3cf;
+  --gold: #d9a441;
+  --amber: #ef8f24;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--night);
+  --color-foreground: var(--parchment-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
+  background: var(--night);
+  color: var(--parchment-light);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.handwriting {
+::selection {
+  background: #d99a35;
+  color: #1f140c;
+}
+
+.handwriting,
+.fantasy-title {
   font-family: "Caveat", cursive;
 }
 
-.handwriting {
-  font-family: "Caveat", cursive;
+.fantasy-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #06111f;
+  background-image:
+    linear-gradient(180deg, rgba(3, 9, 17, 0.04), rgba(3, 9, 17, 0.28)),
+    url("/images/fantasy-page-backdrop.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.fantasy-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 28%, transparent 0 24rem, rgba(1, 5, 10, 0.1) 54rem, rgba(1, 5, 10, 0.38) 100%);
+}
+
+.fantasy-page::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.24), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.24));
+}
+
+@media (max-width: 767px) {
+  .fantasy-page {
+    background-position: center top;
+    background-attachment: scroll;
+  }
+}
+
+.paper-panel {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.62), transparent 24%),
+    radial-gradient(circle at 88% 82%, rgba(113, 68, 28, 0.12), transparent 30%),
+    repeating-linear-gradient(0deg, rgba(85, 48, 22, 0.025) 0 1px, transparent 1px 4px),
+    linear-gradient(135deg, var(--parchment-light), var(--parchment));
+  box-shadow:
+    inset 0 0 36px rgba(91, 49, 17, 0.18),
+    0 18px 50px rgba(0, 0, 0, 0.32);
+}
+
+.ink-border {
+  border: 1px solid rgba(91, 55, 25, 0.45);
+  outline: 1px solid rgba(226, 173, 73, 0.28);
+  outline-offset: 5px;
+}
+
+.magic-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 226, 146, 0.22),
+    0 0 34px rgba(239, 143, 36, 0.34),
+    0 16px 45px rgba(0, 0, 0, 0.38);
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: #d9a441;
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+}
+
+@keyframes ember-float {
+  0%, 100% { transform: translateY(0) rotate(0); opacity: 0.38; }
+  50% { transform: translateY(-12px) rotate(12deg); opacity: 0.92; }
+}
+
+.ember {
+  animation: ember-float 3.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

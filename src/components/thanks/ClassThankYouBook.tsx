@@ -151,7 +151,7 @@ export default function ClassThankYouBook() {
 
           <div className="mt-auto flex items-end justify-between gap-5">
             <div className="font-mono text-[12px] leading-relaxed text-[#594333]">
-              <div>$ git commit -m "Danke Renke"</div>
+              <div>$ git commit -m &quot;Danke Renke&quot;</div>
               <div>$ git push origin erinnerungen</div>
             </div>
 
@@ -307,6 +307,7 @@ export default function ClassThankYouBook() {
         }}
       />
       <div className="absolute inset-0 bg-[#27180f]/58" />
+      <KitchenSketchDecor />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-5 text-center">
