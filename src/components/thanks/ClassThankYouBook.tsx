@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 type Person = {
@@ -11,15 +11,15 @@ type Person = {
 
 const people: Person[] = [
   { id: "muju", name: "Muju", portrait: "/images/class/muju.png" },
-  { id: "elias", name: "Elias", portrait: "/images/class/elias.png" },
-  { id: "eric", name: "Eric", portrait: "/images/class/eric.png" },
-  { id: "marco", name: "Marco", portrait: "/images/class/marco.png" },
-  { id: "christoph", name: "Christoph", portrait: "/images/class/christoph.png" },
-  { id: "kevin", name: "Kevin", portrait: "/images/class/kevin.png" },
-  { id: "niko", name: "Niko", portrait: "/images/class/niko.png" },
-  { id: "marlin", name: "Marlin", portrait: "/images/class/marlin.png" },
-  { id: "daniel", name: "Daniel", portrait: "/images/class/daniel-transparent.png" },
-  { id: "pavel", name: "Pavel", portrait: "/images/class/pavel.png" },
+  { id: "elias", name: "Elias", portrait: "/images/class/optimized/elias-robotik.webp" },
+  { id: "eric", name: "Eric", portrait: "/images/class/optimized/eric-gseai8.webp" },
+  { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.png" },
+  { id: "christoph", name: "Christopher", portrait: "/images/class/optimized/christoph-matrix.webp" },
+  { id: "kevin", name: "Kevin", portrait: "/images/class/optimized/kevin-leetcode.webp" },
+  { id: "niko", name: "Niko", portrait: "/images/class/optimized/niko.webp" },
+  { id: "marlin", name: "Marlin", portrait: "/images/class/optimized/marlin.webp" },
+  { id: "daniel", name: "Daniel", portrait: "/images/class/optimized/daniel-transparent.webp" },
+  { id: "pavel", name: "Pavel", portrait: "/images/class/optimized/pavel-gseai8.webp" },
 ];
 
 const names = people.map((person) => person.name).join(" · ");
@@ -28,6 +28,22 @@ export default function ClassThankYouBook() {
   // -1 = Widmung, 0 = Muju, 1 = Elias ...
   const [page, setPage] = useState(-1);
   const [messages, setMessages] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    fetch("/api/thanks")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Einträge konnten nicht geladen werden.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setMessages(data.messages ?? {});
+      })
+      .catch((error) => {
+        console.error("Dankes-Einträge laden:", error);
+      });
+  }, []);
   const [turning, setTurning] = useState(false);
   const [targetPage, setTargetPage] = useState<number | null>(null);
   const [turnDirection, setTurnDirection] = useState<1 | -1>(1);
@@ -52,29 +68,32 @@ export default function ClassThankYouBook() {
 
   function DedicationLeft() {
     return (
-      <div className="relative h-full overflow-hidden bg-[#ead8b5]">
-        <Image
-          src="/images/danke-renke-left-page.png"
-          alt="Widmungsseite Für Renke"
-          fill
-          priority
-          className="object-cover"
-        />
+      <div className="relative h-full w-full overflow-hidden bg-[#ead8b5]">
+        <div className="absolute bottom-0 left-0 top-0 -right-[36px]">
+          <Image
+            src="/images/danke-renke-left-page.png"
+            alt="Widmungsseite Für Renke"
+            fill
+            priority
+            sizes="50vw"
+            className="object-contain scale-[0.97]"
+          />
+        </div>
       </div>
     );
   }
 
   function DedicationRight() {
     return (
-      <div className="relative flex h-full flex-col overflow-hidden bg-[#f1dfbf] px-11 py-10 text-[#4a3528] sm:px-14">
+      <div className="relative flex h-full flex-col overflow-hidden bg-[#f1dfbf] px-10 py-7 text-[#4a3528] sm:px-12">
         <PaperTexture />
 
         <div className="relative z-10 flex h-full flex-col">
-          <h2 className="font-[cursive] text-5xl leading-none">
+          <h2 className="font-[cursive] text-4xl leading-none">
             Lieber Renke,
           </h2>
 
-          <div className="mt-7 space-y-4 font-serif text-[17px] leading-[1.55]">
+          <div className="mt-4 space-y-4 font-serif text-[17px] leading-[1.55]">
             <p>
               dieses Kochbuch ist eigentlich als Schulprojekt entstanden.
               Aber mit der Zeit wurde daraus viel mehr als nur Code, Rezepte
@@ -114,7 +133,7 @@ export default function ClassThankYouBook() {
             </p>
           </div>
 
-          <div className="my-6 text-center">
+          <div className="my-4 text-center">
             <div className="inline-block rotate-[-1deg] bg-[#e8cfa7]/70 px-8 py-3 font-[cursive] text-3xl">
               Danke für alles, Renke. ♥
             </div>
@@ -163,7 +182,7 @@ export default function ClassThankYouBook() {
             {person.name}
           </h2>
 
-          <div className="relative mx-auto mt-7 h-[390px] w-full max-w-[390px] overflow-hidden">
+          <div className="relative mx-auto mt-7 h-[390px] w-[390px] overflow-hidden rounded-full">
             <Image
               src={person.portrait}
               alt={`${person.name} als Bleistiftzeichnung`}
@@ -196,21 +215,14 @@ export default function ClassThankYouBook() {
 
           <div className="my-7 h-px w-40 bg-[#856044]/35" />
 
-          <textarea
-            value={messages[person.id] ?? ""}
-            onChange={(event) =>
-              setMessages((current) => ({
-                ...current,
-                [person.id]: event.target.value,
-              }))
-            }
-            placeholder={`Was möchtest du Renke sagen, ${person.name}?`}
-            rows={10}
-            className="w-full resize-none rounded-xl border border-[#8a674d]/25 bg-[#f6e8ca]/45 p-5 font-[cursive] text-2xl leading-relaxed outline-none focus:border-[#805b40]"
-          />
+          <div className="handwriting min-h-[330px] w-full whitespace-pre-wrap rounded-xl border border-[#8a674d]/20 bg-[#f6e8ca]/35 p-5 text-3xl leading-relaxed">
+            {messages[person.id]?.trim()
+              ? messages[person.id]
+              : "Noch kein persönlicher Eintrag vorhanden. ❤️"}
+          </div>
 
           <p className="mt-3 text-sm opacity-55">
-            Der Eintrag wird später in Neon gespeichert.
+            Persönlicher Eintrag aus unserem digitalen Gästebuch.
           </p>
 
           <div className="mt-auto flex items-center gap-4 pb-2 text-[#76553d]">
@@ -304,10 +316,10 @@ export default function ClassThankYouBook() {
         </div>
 
         <div
-          className="relative mx-auto max-w-6xl"
+          className="relative mx-auto w-full max-w-[1320px]"
           style={{ perspective: "2600px" }}
         >
-          <div className="relative grid h-[760px] overflow-hidden rounded-[24px] border-[10px] border-[#4e2d1c] bg-[#4e2d1c] shadow-[0_35px_120px_rgba(0,0,0,.75)] lg:grid-cols-2">
+          <div className="relative grid h-[900px] overflow-hidden rounded-[24px] border-[10px] border-[#4e2d1c] bg-[#4e2d1c] shadow-[0_35px_120px_rgba(0,0,0,.75)] lg:grid-cols-2">
             {page === -1 ? (
               <>
                 <DedicationLeft />
@@ -315,8 +327,8 @@ export default function ClassThankYouBook() {
               </>
             ) : (
               <>
-                <PersonLeft person={currentPerson!} />
-                <PersonRight person={currentPerson!} />
+                {PersonLeft({ person: currentPerson! })}
+                {PersonRight({ person: currentPerson! })}
               </>
             )}
 
@@ -352,9 +364,9 @@ export default function ClassThankYouBook() {
                   {page === -1 ? (
                     <DedicationRight />
                   ) : turnDirection === 1 ? (
-                    <PersonRight person={currentPerson!} />
+                    PersonRight({ person: currentPerson! })
                   ) : (
-                    <PersonLeft person={currentPerson!} />
+                    PersonLeft({ person: currentPerson! })
                   )}
                 </div>
 
