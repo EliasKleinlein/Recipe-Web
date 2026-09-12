@@ -1,9 +1,19 @@
-export default function RecipeDetailPage() {
+type RecipeDetailPageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
+export default async function RecipeDetailPage({
+  params,
+}: RecipeDetailPageProps) {
+  const { id } = await params;
+
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">Rezeptdetails</h1>
-      <p className="mt-4 text-neutral-600">
-        Diese Detailseite wird später weiter ausgebaut.
+    <main className="min-h-screen bg-zinc-950 p-8 text-white">
+      <h1 className="text-3xl font-bold">Rezept #{id}</h1>
+      <p className="mt-4 text-zinc-400">
+        Die vollständige Detailseite kommt in Issue #13.
       </p>
     </main>
   );
