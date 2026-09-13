@@ -24,7 +24,7 @@ export default async function RecipeDetailPage({ params }: Props) {
       <Navbar />
       <main className="mx-auto max-w-7xl px-3 py-12 sm:px-8 sm:py-20">
         <Link href="/#rezepte" className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-[#e8bd68] hover:text-[#ffe09a]"><ArrowLeft size={17} /> Zurück zu den Rezepten</Link>
-        <article className="relative isolate overflow-hidden rounded-[2rem] px-[9%] py-[10%] shadow-[0_30px_80px_rgba(0,0,0,.58)] sm:px-[11%] sm:py-[9%]">
+        <article className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-[2rem] px-[9%] py-[10%] shadow-[0_30px_80px_rgba(0,0,0,.58)] sm:px-[11%] sm:py-[9%]">
           <Image
             src="/images/recipe-parchment.webp"
             alt=""
@@ -66,7 +66,7 @@ export default async function RecipeDetailPage({ params }: Props) {
               <ol className="mt-5 space-y-4 font-serif text-lg leading-8">{instructions.map((step, index) => <li key={`${index}-${step}`} className="grid grid-cols-[2rem_1fr] gap-3"><span className="fantasy-title text-2xl font-bold text-[#a36327]">{index + 1}.</span><span>{step}</span></li>)}</ol>
             </section>
           </div>
-          <RenkeRecipeTip title={recipe.title} />
+          <RenkeRecipeTip title={recipe.title} category={recipe.category} tags={recipe.tags} />
           </div>
         </article>
       </main>

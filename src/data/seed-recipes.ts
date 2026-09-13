@@ -277,5 +277,180 @@ Kleine Portionen auf ein Blech setzen.
 Bei 180 °C etwa 12 Minuten backen.`,
     notes: 'Nach dem Servieren meistens sofort Not Found.',
     tags: 'cookies,kekse,schokolade'
+  },
+  {
+    title: 'Renkes Schweinebraten à la Server-Load',
+    original_title: 'Schweinebraten mit Dunkelbiersoße',
+    category: 'Hauptgericht',
+    duration: 145,
+    servings: 6,
+    image: '/images/recipes/schweinebraten-server-load.webp',
+    ingredients: `1,2 kg Schweinenacken oder Schweinebraten
+2 Zwiebeln
+2 Karotten
+2 Knoblauchzehen
+2 EL Senf
+2 EL Öl
+500 ml dunkles Bier
+300 ml Gemüsebrühe
+2 EL Tomatenmark
+1 TL Paprikapulver
+1 TL Majoran
+1 TL Kümmel
+Salz
+Pfeffer`,
+    instructions: `Backofen auf 180 °C Ober-/Unterhitze vorheizen.
+Fleisch mit Salz, Pfeffer, Paprika und Senf einreiben.
+Zwiebeln, Karotten und Knoblauch grob schneiden.
+Öl in einem Bräter erhitzen und das Fleisch rundherum kräftig anbraten.
+Gemüse hinzufügen und kurz mitrösten.
+Tomatenmark einrühren und mit Bier und Brühe ablöschen.
+Majoran und Kümmel hinzufügen.
+Bräter abdecken und etwa 2 Stunden im Ofen schmoren lassen.
+Fleisch herausnehmen und kurz ruhen lassen.
+Soße pürieren oder durch ein Sieb streichen und abschmecken.
+Braten in Scheiben schneiden und mit der Soße servieren.`,
+    notes: 'Wenn die Serverlast steigt, muss wenigstens der Braten stabil bleiben.',
+    tags: 'schweinebraten,fleisch,deutsch,dunkelbier,herzhaft'
+  },
+  {
+    title: 'Renkes Pilzpfanne à la Bugfix-Rahm',
+    original_title: 'Cremige Hähnchen-Pilzpfanne',
+    category: 'Geflügel',
+    duration: 45,
+    servings: 4,
+    image: '/images/recipes/pilzpfanne-bugfix-rahm.webp',
+    ingredients: `500 g Hähnchenbrust
+400 g Champignons
+1 Zwiebel
+2 Knoblauchzehen
+200 ml Sahne
+150 ml Gemüsebrühe
+2 EL Öl
+1 EL Butter
+1 TL Thymian
+1 EL gehackte Petersilie
+Salz
+Pfeffer`,
+    instructions: `Hähnchenbrust in Streifen schneiden und mit Salz und Pfeffer würzen.
+Öl in einer großen Pfanne erhitzen und das Fleisch kräftig anbraten.
+Fleisch aus der Pfanne nehmen und beiseitestellen.
+Zwiebel und Knoblauch fein hacken.
+Champignons in Scheiben schneiden.
+Butter in die Pfanne geben und Zwiebeln, Knoblauch und Champignons goldbraun braten.
+Mit Gemüsebrühe und Sahne ablöschen.
+Thymian hinzufügen und die Soße einige Minuten einkochen lassen.
+Hähnchen wieder in die Pfanne geben und etwa 5 Minuten ziehen lassen.
+Mit Petersilie bestreuen und servieren.`,
+    notes: 'Dieser Bugfix braucht weder Neustart noch Hotfix.',
+    tags: 'hähnchen,pilze,rahm,champignons,herzhaft'
+  },
+  {
+    title: 'Walters Zwiebelbrot à la Compile-Kruste',
+    original_title: 'Rustikales Zwiebelbrot',
+    category: 'Brot & Backstube',
+    duration: 120,
+    servings: 8,
+    image: '/images/recipes/zwiebelbrot-compile-kruste.webp',
+    ingredients: `500 g Weizenmehl Type 550
+1 Würfel frische Hefe oder 1 Päckchen Trockenhefe
+300 ml lauwarmes Wasser
+1 TL Zucker
+2 TL Salz
+2 EL Öl
+100 g Röstzwiebeln`,
+    instructions: `Hefe zusammen mit dem Zucker im lauwarmen Wasser auflösen.
+Die Hefemischung etwa 10 Minuten ruhen lassen.
+Mehl, Salz, Öl und Röstzwiebeln in eine große Schüssel geben.
+Hefewasser hinzufügen und alles zu einem glatten Teig kneten.
+Teig abdecken und etwa 60 Minuten an einem warmen Ort gehen lassen.
+Teig zu einem Brotlaib formen und auf ein Backblech setzen.
+Weitere 20 Minuten ruhen lassen.
+Oberfläche mit einem scharfen Messer leicht einschneiden.
+Bei 220 °C Ober-/Unterhitze etwa 35 bis 40 Minuten goldbraun backen.`,
+    notes: 'Wenn die Kruste kompiliert, war der Build erfolgreich.',
+    tags: 'brot,zwiebelbrot,röstzwiebeln,backstube,walter'
+  },
+  {
+    title: 'Walters Kräuter-Focaccia à la Syntax-Garden',
+    original_title: 'Kräuter-Focaccia mit Rosmarin',
+    category: 'Brot & Backstube',
+    duration: 105,
+    servings: 6,
+    image: '/images/recipes/kraeuter-focaccia-syntax-garden.webp',
+    ingredients: `500 g Weizenmehl
+1 Päckchen Trockenhefe
+320 ml lauwarmes Wasser
+2 TL Salz
+3 EL Olivenöl
+2 Zweige Rosmarin
+1 TL Thymian
+Grobes Meersalz`,
+    instructions: `Mehl, Trockenhefe und Salz in einer Schüssel vermischen.
+Lauwarmes Wasser und 2 EL Olivenöl hinzufügen.
+Alles zu einem weichen geschmeidigen Teig verkneten.
+Teig abdecken und etwa 60 Minuten gehen lassen.
+Eine Backform mit etwas Olivenöl einfetten.
+Teig hineingeben und vorsichtig auseinanderziehen.
+Mit den Fingern typische Mulden in die Oberfläche drücken.
+Rosmarin und Thymian darauf verteilen.
+Mit dem restlichen Olivenöl beträufeln und mit grobem Meersalz bestreuen.
+Bei 220 °C etwa 25 Minuten goldbraun backen.`,
+    notes: 'Ein Syntax-Garden ohne Semikolon, aber mit reichlich Rosmarin.',
+    tags: 'focaccia,brot,rosmarin,kräuter,backstube,walter'
+  },
+  {
+    title: 'Maltes Apfel-Zimt-Tarte à la Sweet Commit',
+    original_title: 'Apfel-Zimt-Tarte',
+    category: 'Kuchen & Torten',
+    duration: 95,
+    servings: 8,
+    image: '/images/recipes/apfel-zimt-tarte-sweet-commit.webp',
+    ingredients: `250 g Mehl
+125 g kalte Butter
+80 g Zucker
+1 Ei
+4 Äpfel
+2 EL Zucker
+1 TL Zimt
+1 EL Zitronensaft
+20 g Butter`,
+    instructions: `Mehl, kalte Butter, Zucker und Ei zu einem Mürbeteig verkneten.
+Teig zu einer Kugel formen und etwa 30 Minuten kalt stellen.
+Äpfel schälen, entkernen und in dünne Scheiben schneiden.
+Apfelscheiben mit Zucker, Zimt und Zitronensaft vermischen.
+Teig ausrollen und in eine gefettete Tarteform legen.
+Äpfel fächerförmig auf dem Teig verteilen.
+Kleine Butterflöckchen auf den Äpfeln verteilen.
+Bei 180 °C Ober-/Unterhitze etwa 35 Minuten goldbraun backen.
+Vor dem Anschneiden kurz abkühlen lassen.`,
+    notes: 'Ein Sweet Commit, der garantiert nicht zurückgerollt wird.',
+    tags: 'apfel,tarte,zimt,kuchen,dessert,malte'
+  },
+  {
+    title: 'Maltes Schoko-Kirsch-Dessert à la Dark Mode Deluxe',
+    original_title: 'Schoko-Kirsch-Dessert im Glas',
+    category: 'Dessert',
+    duration: 35,
+    servings: 4,
+    image: '/images/recipes/schoko-kirsch-dessert-dark-mode-deluxe.webp',
+    ingredients: `200 g Zartbitterschokolade
+250 ml Sahne
+250 g Mascarpone
+1 Glas Sauerkirschen
+2 EL Zucker
+1 TL Vanillezucker
+80 g Schokoraspel`,
+    instructions: `Zartbitterschokolade vorsichtig schmelzen und etwas abkühlen lassen.
+Sahne steif schlagen.
+Mascarpone mit Zucker und Vanillezucker glatt rühren.
+Geschmolzene Schokolade unter die Mascarponecreme rühren.
+Geschlagene Sahne vorsichtig unterheben.
+Sauerkirschen gut abtropfen lassen.
+Schokocreme und Kirschen abwechselnd in Dessertgläser schichten.
+Mit Schokoraspeln dekorieren.
+Bis zum Servieren kalt stellen.`,
+    notes: 'Dark Mode Deluxe: maximale Schokolade bei minimaler Bildschirmhelligkeit.',
+    tags: 'schokolade,kirschen,dessert,dark-mode,malte'
   }
 ] as const;

@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-const RECIPE_TIPS: Array<[string, string]> = [
+type MasterId = "renke" | "walter" | "malte";
+
+type TipProps = {
+  title: string;
+  category: string;
+  tags?: string | null;
+};
+
+const SPECIFIC_TIPS: Array<[string, string]> = [
   ["Cannabis-Brownies", "Dieser Build wird von mir garantiert niemals ausgeführt!"],
   ["Schweinehaxe", "Die Kruste muss lauter knacken als deine Tastatur."],
   ["Debugger-Bolognese", "Die Soße lange köcheln lassen – gute Bugs brauchen schließlich auch Zeit."],
@@ -14,26 +22,86 @@ const RECIPE_TIPS: Array<[string, string]> = [
   ["Promise-All", "Erst wenden, wenn alle Bläschen gleichzeitig aufgelöst sind."],
   ["While-Schleife", "Nicht endlos rollen – einmal fest einschlagen reicht."],
   ["Not Found", "Leere Keksdose? Dann war das Deployment erfolgreich."],
+  ["Server-Load", "Ein guter Braten braucht Geduld – Überhitzung ist nur im Serverraum sinnvoll."],
+  ["Bugfix-Rahm", "Pilze kräftig anbraten, dann läuft auch die Rahmsoße stabil."],
+  ["Compile-Kruste", "Die Kruste darf dunkel werden – Hauptsache, der Kern bleibt weich und warm."],
+  ["Syntax-Garden", "Rosmarin, Öl und Salz sind die schönste Syntax für gutes Brot."],
+  ["Sweet Commit", "Äpfel fächerförmig legen – dann sieht selbst das Dessert nach Premium-Release aus."],
+  ["Dark Mode Deluxe", "Schokolade und Kirschen sind das perfekte Duo für süße Nachtarbeit."],
 ];
 
-function getTip(title: string) {
-  return RECIPE_TIPS.find(([recipeName]) => title.includes(recipeName))?.[1]
-    ?? "Erst lesen, dann würzen – Debugging schmeckt rückwärts nicht besser.";
+const MASTER_META: Record<
+  MasterId,
+  {
+    label: string;
+    image: string;
+    alt: string;
+    fallbackTip: string;
+  }
+> = {
+  renke: {
+    label: "Renkes Tipp",
+    image: "/images/renke-tip-sticker.webp",
+    alt: "Renke als gezeichneter Koch mit erhobenem Zeigefinger",
+    fallbackTip: "Erst lesen, dann würzen – Debugging schmeckt rückwärts nicht besser.",
+  },
+  walter: {
+    label: "Walters Backstuben-Tipp",
+    image: "/images/walter-tip-sticker.webp",
+    alt: "Walter als gezeichneter Bäcker mit freundlichem Hinweis",
+    fallbackTip: "Gib dem Teig Zeit – gute Kruste entsteht nicht im Schnellmodus.",
+  },
+  malte: {
+    label: "Maltes Konditor-Tipp",
+    image: "/images/malte-tip-sticker.webp",
+    alt: "Malte als gezeichneter Konditor mit süßem Expertenrat",
+    fallbackTip: "Bei Süßem gilt: lieber mit Gefühl verfeinern als blind überzuckern.",
+  },
+};
+
+const BAKER_WORDS =
+  /brot|backstube|brötchen|focaccia|baguette|ciabatta|hefe|laib|kruste|teig/i;
+
+const PASTRY_WORDS =
+  /kuchen|torte|dessert|brownie|brownies|keks|kekse|cookie|cookies|pancake|pancakes|süß|suess|schokolade|gebäck|gebaeck|tarte|käsekuchen|kaesekuchen|schoko/i;
+
+function chooseMaster(title: string, category: string, tags?: string | null): MasterId {
+  const text = `${title} ${category} ${tags ?? ""}`.toLowerCase();
+
+  if (BAKER_WORDS.test(text)) return "walter";
+  if (PASTRY_WORDS.test(text)) return "malte";
+  return "renke";
 }
 
-export default function RenkeRecipeTip({ title }: { title: string }) {
+function getTip(title: string, master: MasterId) {
+  const specificTip = SPECIFIC_TIPS.find(([recipeName]) => title.includes(recipeName))?.[1];
+  if (specificTip) return specificTip;
+  return MASTER_META[master].fallbackTip;
+}
+
+export default function RenkeRecipeTip({ title, category, tags }: TipProps) {
+  const master = chooseMaster(title, category, tags);
+  const meta = MASTER_META[master];
+  const tip = getTip(title, master);
+
   return (
-    <aside className="ml-auto mt-12 flex max-w-2xl flex-col items-end justify-end sm:flex-row sm:items-end" aria-label="Renkes Rezepttipp">
+    <aside
+      className="ml-auto mt-12 flex max-w-2xl flex-col items-end justify-end sm:flex-row sm:items-end"
+      aria-label={`${meta.label} zur Rezeptseite`}
+    >
       <div className="relative z-10 mb-[-.5rem] max-w-md rounded-[1.5rem] border-2 border-[#9a5c25] bg-[#fff1c6]/95 px-5 py-4 text-[#432818] shadow-[0_12px_30px_rgba(61,31,12,.24)] sm:mb-12 sm:mr-[-1.1rem]">
-        <div className="text-xs font-black uppercase tracking-[.2em] text-[#a05b20]">Renkes Tipp</div>
-        <p className="mt-2 font-serif text-base font-bold leading-6 sm:text-lg">{getTip(title)}</p>
-        <span className="absolute -bottom-3 right-10 h-6 w-6 rotate-45 border-b-2 border-r-2 border-[#9a5c25] bg-[#fff1c6] sm:-right-3 sm:bottom-8" aria-hidden="true" />
+        <div className="text-xs font-black uppercase tracking-[.2em] text-[#a05b20]">{meta.label}</div>
+        <p className="mt-2 font-serif text-base font-bold leading-6 sm:text-lg">{tip}</p>
+        <span
+          className="absolute -bottom-3 right-10 h-6 w-6 rotate-45 border-b-2 border-r-2 border-[#9a5c25] bg-[#fff1c6] sm:-right-3 sm:bottom-8"
+          aria-hidden="true"
+        />
       </div>
 
       <div className="relative h-56 w-48 shrink-0 sm:h-64 sm:w-56">
         <Image
-          src="/images/renke-tip-sticker.webp"
-          alt="Renke als gezeichneter Koch mit erhobenem Zeigefinger"
+          src={meta.image}
+          alt={meta.alt}
           fill
           sizes="(max-width: 640px) 192px, 224px"
           className="object-contain object-bottom drop-shadow-[0_12px_16px_rgba(57,27,8,.3)]"
