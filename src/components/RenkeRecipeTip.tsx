@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ChristophusAdvice from "@/components/ChristophusAdvice";
 
 type MasterId = "renke" | "walter" | "malte";
 
@@ -85,7 +86,8 @@ export default function RenkeRecipeTip({ title, category, tags }: TipProps) {
   const tip = getTip(title, master);
 
   return (
-    <aside
+    <>
+      <aside
       className="ml-auto mt-12 flex max-w-2xl flex-col items-end justify-end sm:flex-row sm:items-end"
       aria-label={`${meta.label} zur Rezeptseite`}
     >
@@ -107,6 +109,13 @@ export default function RenkeRecipeTip({ title, category, tags }: TipProps) {
           className="object-contain object-bottom drop-shadow-[0_12px_16px_rgba(57,27,8,.3)]"
         />
       </div>
-    </aside>
+      </aside>
+
+      <ChristophusAdvice
+        title={title}
+        category={category}
+        tags={tags}
+      />
+    </>
   );
 }
