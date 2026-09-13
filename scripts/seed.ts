@@ -1,19 +1,22 @@
-import dotenv from 'dotenv';
-import { neon } from '@neondatabase/serverless';
-import { seedRecipes } from '../src/data/seed-recipes';
+import dotenv from "dotenv";
+import { neon } from "@neondatabase/serverless";
+import { seedRecipes } from "../src/data/seed-recipes";
+import { specialRecipes } from "../src/data/special-recipes";
 
-dotenv.config({ path: '.env.local' });
+dotenv.config({ path: ".env.local" });
 
 if (!process.env.DATABASE_URL) {
-  throw new Error('DATABASE_URL fehlt');
+  throw new Error("DATABASE_URL fehlt");
 }
 
 const sql = neon(process.env.DATABASE_URL);
 
 async function seed() {
-  console.log('Seed startet ...');
+  const recipes = [...seedRecipes, ...specialRecipes];
 
-  for (const recipe of seedRecipes) {
+  console.log("Seed startet ...");
+
+  for (const recipe of recipes) {
     const result = await sql`
       INSERT INTO recipes (
         title,
@@ -51,10 +54,10 @@ async function seed() {
     }
   }
 
-  console.log(`Fertig: ${seedRecipes.length} Rezepte geprüft.`);
+  console.log(`Fertig: ${recipes.length} Rezepte geprüft.`);
 }
 
 seed().catch((error) => {
-  console.error('Seed fehlgeschlagen:', error);
+  console.error("Seed fehlgeschlagen:", error);
   process.exit(1);
 });
