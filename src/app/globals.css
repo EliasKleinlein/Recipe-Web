@@ -270,3 +270,75 @@ body {
 }
 
 
+
+/* =========================================================
+   Rezeptkarten – Küchenmeister Neon Hover
+   ========================================================= */
+
+.recipe-master-glow {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease,
+    filter 280ms ease;
+}
+
+/* RENKE – ROT */
+a[data-master="renke"]:hover {
+  border-color: #ff3030 !important;
+  box-shadow:
+    0 0 4px #ff3030,
+    0 0 12px rgba(255, 48, 48, 0.95),
+    0 0 28px rgba(255, 48, 48, 0.8),
+    0 0 55px rgba(255, 20, 20, 0.55),
+    0 24px 60px rgba(0, 0, 0, 0.55) !important;
+  filter: saturate(1.08);
+}
+
+/* WALTER – GOLD */
+a[data-master="walter"]:hover {
+  border-color: #ffd45c !important;
+  box-shadow:
+    0 0 4px #ffd45c,
+    0 0 12px rgba(255, 212, 92, 0.95),
+    0 0 28px rgba(255, 190, 55, 0.8),
+    0 0 55px rgba(255, 170, 20, 0.55),
+    0 24px 60px rgba(0, 0, 0, 0.55) !important;
+  filter: saturate(1.08);
+}
+
+/* MALTE – PINK */
+a[data-master="malte"]:hover {
+  border-color: #ff46d7 !important;
+  box-shadow:
+    0 0 4px #ff46d7,
+    0 0 12px rgba(255, 70, 215, 0.95),
+    0 0 28px rgba(255, 45, 190, 0.8),
+    0 0 55px rgba(255, 20, 165, 0.55),
+    0 24px 60px rgba(0, 0, 0, 0.55) !important;
+  filter: saturate(1.08);
+}
+
+/* zusätzliche Neon-Kante */
+a[data-master="renke"]:hover,
+a[data-master="walter"]:hover,
+a[data-master="malte"]:hover {
+  transform: translateY(-10px) scale(1.015);
+  z-index: 20;
+}
+
+/* Maltes Cannabis-Brownies – Neon Grün */
+a[data-master="cannabis"]:hover {
+  border-color: #39ff14 !important;
+  box-shadow:
+    0 0 5px #39ff14,
+    0 0 14px rgba(57, 255, 20, 0.95),
+    0 0 32px rgba(57, 255, 20, 0.80),
+    0 0 65px rgba(30, 255, 60, 0.58),
+    0 24px 60px rgba(0, 0, 0, 0.55) !important;
+  filter: saturate(1.12);
+  transform: translateY(-10px) scale(1.015);
+  z-index: 20;
+}
