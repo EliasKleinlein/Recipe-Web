@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
 import { seedRecipes } from "../src/data/seed-recipes";
+import { extraRecipes } from "../src/data/extra-recipes";
 import { specialRecipes } from "../src/data/special-recipes";
 
 dotenv.config({ path: ".env.local" });
@@ -12,7 +13,7 @@ if (!process.env.DATABASE_URL) {
 const sql = neon(process.env.DATABASE_URL);
 
 async function seed() {
-  const recipes = [...seedRecipes, ...specialRecipes];
+  const recipes = [...seedRecipes, ...extraRecipes, ...specialRecipes];
 
   console.log("Seed startet ...");
 
