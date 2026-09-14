@@ -27,11 +27,16 @@ export default function RecipeCard({ id, title, originalTitle, category, duratio
       masterText,
     );
 
-  const master = isWalter
-    ? "walter"
-    : isMalte
-      ? "malte"
-      : "renke";
+  const isCannabisBrownie =
+    masterText.includes("cannabis-brownies");
+
+  const master = isCannabisBrownie
+    ? "cannabis"
+    : isWalter
+      ? "walter"
+      : isMalte
+        ? "malte"
+        : "renke";
 
   const isMujuSpecialRecipe = title.includes("Cannabis-Brownies à la Muju");
 
