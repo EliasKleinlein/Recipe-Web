@@ -1,3 +1,4 @@
+import ChristophusCompanion from "@/components/ChristophusCompanion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, Sparkles } from "lucide-react";
@@ -68,6 +69,8 @@ export default function Hero() {
           while(hungry) &#123;<br />&nbsp;&nbsp;cook();<br />&nbsp;&nbsp;eat();<br />&#125;
         </div>
       </div>
+
+      <ChristophusCompanion />
 
       <p className="absolute bottom-4 right-5 z-30 hidden rounded-full border border-[#f1c56c]/35 bg-[#140d08]/72 px-4 py-2 font-serif text-xs italic text-[#f5d895] shadow-lg backdrop-blur-sm sm:block">
         Kompiliert mit einer Prise Magie

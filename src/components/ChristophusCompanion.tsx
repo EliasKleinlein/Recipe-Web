@@ -26,7 +26,7 @@ const CHRISTOPHUS_SAYINGS = [
   "Ich wollte nur helfen. Schon wieder.",
 ];
 
-export default function GrisuCompanion() {
+export default function ChristophusCompanion() {
   const [sayingIndex, setSayingIndex] = useState(0);
 
   useEffect(() => {
