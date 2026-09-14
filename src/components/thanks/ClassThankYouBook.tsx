@@ -19,14 +19,92 @@ const people: Person[] = [
   { id: "niko", name: "Niko", portrait: "/images/class/optimized/niko.webp" },
   { id: "marlin", name: "Marlin", portrait: "/images/class/optimized/marlin.webp" },
   { id: "daniel", name: "Daniel", portrait: "/images/class/optimized/daniel-transparent.webp" },
-  { id: "pavel", name: "Pavel", portrait: "/images/class/optimized/pavel-gseai8.webp" },
+  { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.png" },
 ];
 
 const names = people.map((person) => person.name).join(" · ");
 
+
+const MESSAGE_PAGE_LIMIT = 320;
+
+const EMPTY_MESSAGE = "Noch kein persönlicher Eintrag vorhanden. ❤️";
+
+function paginateMessage(message: string, limit = MESSAGE_PAGE_LIMIT) {
+  const normalized = message.trim();
+
+  if (!normalized) {
+    return [EMPTY_MESSAGE];
+  }
+
+  const paragraphs = normalized
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
+  const pages: string[] = [];
+  let current = "";
+
+  function pushCurrent() {
+    if (current.trim()) {
+      pages.push(current.trim());
+      current = "";
+    }
+  }
+
+  for (const paragraph of paragraphs) {
+    const words = paragraph.split(/\s+/);
+    let paragraphPart = "";
+
+    for (const word of words) {
+      const candidate = paragraphPart
+        ? `${paragraphPart} ${word}`
+        : word;
+
+      if (candidate.length <= limit) {
+        paragraphPart = candidate;
+        continue;
+      }
+
+      if (paragraphPart) {
+        const combined = current
+          ? `${current}\n\n${paragraphPart}`
+          : paragraphPart;
+
+        if (combined.length <= limit) {
+          current = combined;
+        } else {
+          pushCurrent();
+          current = paragraphPart;
+        }
+      }
+
+      paragraphPart = word;
+    }
+
+    if (paragraphPart) {
+      const combined = current
+        ? `${current}\n\n${paragraphPart}`
+        : paragraphPart;
+
+      if (combined.length <= limit) {
+        current = combined;
+      } else {
+        pushCurrent();
+        current = paragraphPart;
+      }
+    }
+  }
+
+  pushCurrent();
+
+  return pages.length ? pages : [EMPTY_MESSAGE];
+}
+
+
 export default function ClassThankYouBook() {
   // -1 = Widmung, 0 = Muju, 1 = Elias ...
   const [page, setPage] = useState(-1);
+  const [textPage, setTextPage] = useState(0);
   const [messages, setMessages] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -46,23 +124,34 @@ export default function ClassThankYouBook() {
   }, []);
   const [turning, setTurning] = useState(false);
   const [targetPage, setTargetPage] = useState<number | null>(null);
+  const [targetTextPage, setTargetTextPage] = useState(0);
   const [turnDirection, setTurnDirection] = useState<1 | -1>(1);
+  const [revealBackwardTarget, setRevealBackwardTarget] = useState(false);
 
-  function turnTo(nextPage: number, direction: 1 | -1) {
+  function turnTo(
+    nextPage: number,
+    direction: 1 | -1,
+    nextTextPage = 0,
+  ) {
     if (turning) return;
     if (nextPage < -1 || nextPage >= people.length) return;
 
     setTargetPage(nextPage);
+    setTargetTextPage(nextTextPage);
     setTurnDirection(direction);
+    setRevealBackwardTarget(false);
     setTurning(true);
   }
 
   function finishTurn() {
     if (targetPage !== null) {
       setPage(targetPage);
+      setTextPage(targetPage === -1 ? 0 : targetTextPage);
     }
 
     setTargetPage(null);
+    setTargetTextPage(0);
+    setRevealBackwardTarget(false);
     setTurning(false);
   }
 
@@ -199,12 +288,24 @@ export default function ClassThankYouBook() {
     );
   }
 
-  function PersonRight({ person }: { person: Person }) {
+  function PersonRight({
+    person,
+    textPage: requestedTextPage,
+  }: {
+    person: Person;
+    textPage: number;
+  }) {
+    const personPages = paginateMessage(messages[person.id] ?? "");
+    const safeTextPage = Math.min(
+      requestedTextPage,
+      personPages.length - 1,
+    );
+
     return (
       <div className="relative flex h-full flex-col overflow-hidden bg-[#f1dfbf] p-10 text-[#523a2c] sm:p-14">
         <PaperTexture />
 
-        <div className="relative z-10 flex h-full flex-col">
+        <div className="relative z-10 flex h-full min-h-0 flex-col">
           <p className="font-[cursive] text-xl text-[#8b674d]">
             {person.name} schreibt:
           </p>
@@ -215,17 +316,23 @@ export default function ClassThankYouBook() {
 
           <div className="my-7 h-px w-40 bg-[#856044]/35" />
 
-          <div className="handwriting min-h-[330px] w-full whitespace-pre-wrap rounded-xl border border-[#8a674d]/20 bg-[#f6e8ca]/35 p-5 text-3xl leading-relaxed">
-            {messages[person.id]?.trim()
-              ? messages[person.id]
-              : "Noch kein persönlicher Eintrag vorhanden. ❤️"}
+          <div className="handwriting min-h-0 flex-1 w-full whitespace-pre-wrap overflow-hidden rounded-xl border border-[#8a674d]/20 bg-[#f6e8ca]/35 p-5 text-[26px] leading-[1.65]">
+            {personPages[safeTextPage]}
           </div>
 
-          <p className="mt-3 text-sm opacity-55">
-            Persönlicher Eintrag aus unserem digitalen Gästebuch.
-          </p>
+          <div className="mt-3 flex items-center justify-between gap-4 text-sm opacity-55">
+            <p>
+              Persönlicher Eintrag aus unserem digitalen Gästebuch.
+            </p>
 
-          <div className="mt-auto flex items-center gap-4 pb-2 text-[#76553d]">
+            {personPages.length > 1 && (
+              <p className="shrink-0 font-semibold">
+                Textseite {safeTextPage + 1} von {personPages.length}
+              </p>
+            )}
+          </div>
+
+          <div className="mt-auto flex items-center gap-4 pb-2 pt-5 text-[#76553d]">
             <div className="h-px flex-1 bg-[#76553d]/25" />
             <span>♥</span>
             <div className="h-px flex-1 bg-[#76553d]/25" />
@@ -235,54 +342,6 @@ export default function ClassThankYouBook() {
     );
   }
 
-
-  function KitchenSketchDecor() {
-    return (
-      <>
-        {/* Knoblauch + Kräuter oben links */}
-        <svg
-          viewBox="0 0 180 180"
-          className="pointer-events-none absolute left-5 top-20 z-10 h-36 w-36 rotate-[-8deg] text-[#5d4938] opacity-75"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M83 39c-8 6-18 8-24 20-7 14-5 33 7 43 8 7 25 9 35 2 14-10 17-31 7-45-7-10-17-13-25-20Z" />
-          <path d="M82 39c-2-13 2-25 11-35" />
-          <path d="M68 59c10 8 17 23 16 43" />
-          <path d="M98 58c-9 10-13 25-10 44" />
-
-          <path d="M112 119c17-20 24-40 26-65" />
-          <path d="M128 84c12-7 21-13 28-23" />
-          <path d="M132 71c-10-3-16-7-22-13" />
-          <path d="M138 57c9-5 15-11 20-18" />
-
-          <path d="M50 124c-12-19-17-40-15-62" />
-          <path d="M36 92c-10-6-17-13-23-22" />
-          <path d="M37 77c10-3 17-8 23-14" />
-        </svg>
-
-        {/* Kochlöffel rechts */}
-        <svg
-          viewBox="0 0 120 420"
-          className="pointer-events-none absolute right-2 top-44 z-10 h-[390px] w-28 rotate-[9deg] text-[#5d4938] opacity-70"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <ellipse cx="60" cy="63" rx="34" ry="52" />
-          <ellipse cx="60" cy="63" rx="20" ry="36" opacity=".45" />
-          <path d="M54 112c-3 67-6 139-5 211 0 41 3 68 11 82" />
-          <path d="M66 112c4 67 7 139 6 211 0 41-4 68-12 82" />
-          <path d="M50 325c6 8 15 12 22 0" />
-        </svg>
-      </>
-    );
-  }
 
   function PaperTexture() {
     return (
@@ -298,20 +357,74 @@ export default function ClassThankYouBook() {
   const targetPerson =
     targetPage !== null && targetPage >= 0 ? people[targetPage] : null;
 
+  function getPagesForPerson(person: Person) {
+    return paginateMessage(messages[person.id] ?? "");
+  }
+
+  const currentTextPageCount = currentPerson
+    ? getPagesForPerson(currentPerson).length
+    : 1;
+
+  function goBack() {
+    if (turning || page === -1) return;
+
+    if (textPage > 0) {
+      turnTo(page, -1, textPage - 1);
+      return;
+    }
+
+    if (page === 0) {
+      turnTo(-1, -1, 0);
+      return;
+    }
+
+    const previousPerson = people[page - 1];
+    const previousPageCount = getPagesForPerson(previousPerson).length;
+
+    turnTo(page - 1, -1, previousPageCount - 1);
+  }
+
+  function goForward() {
+    if (turning) return;
+
+    if (page === -1) {
+      turnTo(0, 1, 0);
+      return;
+    }
+
+    if (textPage < currentTextPageCount - 1) {
+      turnTo(page, 1, textPage + 1);
+      return;
+    }
+
+    if (page < people.length - 1) {
+      turnTo(page + 1, 1, 0);
+    }
+  }
+
+  const canGoBack = page !== -1 && !turning;
+
+  const canGoForward =
+    !turning &&
+    (
+      page === -1 ||
+      textPage < currentTextPageCount - 1 ||
+      page < people.length - 1
+    );
+
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#261913] px-4 py-7">
+    <main className="relative min-h-screen overflow-hidden bg-[#120b08] px-4 py-7">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-45 grayscale"
+        className="absolute inset-0 bg-cover bg-center opacity-80"
         style={{
-          backgroundImage: "url('/images/danke-renke-kitchen.jpg')",
+          backgroundImage: "url('/images/thanks/castle-library.png')",
         }}
       />
-      <div className="absolute inset-0 bg-[#27180f]/58" />
-      <KitchenSketchDecor />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,8,5,.28),rgba(20,10,6,.48)_55%,rgba(10,5,3,.72))]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-5 text-center">
-          <h1 className="font-serif text-4xl text-[#f4ddba] sm:text-5xl">
+          <h1 className="font-serif text-4xl text-[#ffe5b0] drop-shadow-[0_3px_14px_rgba(255,170,72,.35)] sm:text-5xl">
             Danke Renke
           </h1>
         </div>
@@ -321,15 +434,69 @@ export default function ClassThankYouBook() {
           style={{ perspective: "2600px" }}
         >
           <div className="relative grid h-[900px] overflow-hidden rounded-[24px] border-[10px] border-[#4e2d1c] bg-[#4e2d1c] shadow-[0_35px_120px_rgba(0,0,0,.75)] lg:grid-cols-2">
-            {page === -1 ? (
+            {turning && targetPage !== null ? (
+              turnDirection === 1 ? (
+                <>
+                  {/* Vorwärts:
+                      links bleibt die alte Seite,
+                      rechts liegt die neue Seite bereits darunter */}
+                  {page === -1 ? (
+                    <DedicationLeft />
+                  ) : (
+                    <PersonLeft person={currentPerson!} />
+                  )}
+
+                  {targetPage === -1 ? (
+                    <DedicationRight />
+                  ) : targetPerson ? (
+                    <PersonRight
+                      person={targetPerson}
+                      textPage={targetTextPage}
+                    />
+                  ) : null}
+                </>
+              ) : (
+                <>
+                  {/* Rückwärts:
+                      links liegt bereits die Zielseite,
+                      rechts bleibt noch die aktuelle Seite */}
+                  {targetPage === -1 ? (
+                    <DedicationLeft />
+                  ) : targetPerson ? (
+                    <PersonLeft person={targetPerson} />
+                  ) : null}
+
+                  {revealBackwardTarget ? (
+                    targetPage === -1 ? (
+                      <DedicationRight />
+                    ) : targetPerson ? (
+                      <PersonRight
+                        person={targetPerson}
+                        textPage={targetTextPage}
+                      />
+                    ) : null
+                  ) : page === -1 ? (
+                    <DedicationRight />
+                  ) : (
+                    <PersonRight
+                      person={currentPerson!}
+                      textPage={textPage}
+                    />
+                  )}
+                </>
+              )
+            ) : page === -1 ? (
               <>
                 <DedicationLeft />
                 <DedicationRight />
               </>
             ) : (
               <>
-                {PersonLeft({ person: currentPerson! })}
-                {PersonRight({ person: currentPerson! })}
+                <PersonLeft person={currentPerson!} />
+                <PersonRight
+                  person={currentPerson!}
+                  textPage={textPage}
+                />
               </>
             )}
 
@@ -343,6 +510,18 @@ export default function ClassThankYouBook() {
                 transition={{
                   duration: 1.15,
                   ease: [0.45, 0.05, 0.15, 1],
+                }}
+                onUpdate={(latest) => {
+                  if (turnDirection !== -1 || revealBackwardTarget) return;
+
+                  const rotateY =
+                    typeof latest.rotateY === "number"
+                      ? latest.rotateY
+                      : Number.parseFloat(String(latest.rotateY ?? "0"));
+
+                  if (rotateY >= 90) {
+                    setRevealBackwardTarget(true);
+                  }
                 }}
                 onAnimationComplete={finishTurn}
                 style={{
@@ -365,7 +544,7 @@ export default function ClassThankYouBook() {
                   {page === -1 ? (
                     <DedicationRight />
                   ) : turnDirection === 1 ? (
-                    PersonRight({ person: currentPerson! })
+                    PersonRight({ person: currentPerson!, textPage })
                   ) : (
                     PersonLeft({ person: currentPerson! })
                   )}
@@ -379,12 +558,19 @@ export default function ClassThankYouBook() {
                   }}
                 >
                   {targetPage === -1 ? (
-                    <DedicationLeft />
+                    turnDirection === 1 ? (
+                      <DedicationLeft />
+                    ) : (
+                      <DedicationRight />
+                    )
                   ) : targetPerson ? (
                     turnDirection === 1 ? (
                       <PersonLeft person={targetPerson} />
                     ) : (
-                      <PersonRight person={targetPerson} />
+                      <PersonRight
+                        person={targetPerson}
+                        textPage={targetTextPage}
+                      />
                     )
                   ) : null}
                 </div>
@@ -398,8 +584,8 @@ export default function ClassThankYouBook() {
           <div className="relative z-50 mx-auto mt-5 flex max-w-3xl items-center justify-between">
             <button
               type="button"
-              disabled={page === -1 || turning}
-              onClick={() => turnTo(page - 1, -1)}
+              disabled={!canGoBack}
+              onClick={goBack}
               className="rounded-full border border-[#d0ac82] bg-[#342116]/90 px-6 py-3 text-[#f4ddbd] transition hover:bg-[#4a3022] disabled:opacity-25"
             >
               ← Zurück
@@ -412,14 +598,16 @@ export default function ClassThankYouBook() {
               <p className="text-xs opacity-60">
                 {page === -1
                   ? "Für Renke"
-                  : `${page + 1} von ${people.length}`}
+                  : currentTextPageCount > 1
+                    ? `${page + 1} von ${people.length} · Textseite ${textPage + 1} von ${currentTextPageCount}`
+                    : `${page + 1} von ${people.length}`}
               </p>
             </div>
 
             <button
               type="button"
-              disabled={page === people.length - 1 || turning}
-              onClick={() => turnTo(page + 1, 1)}
+              disabled={!canGoForward}
+              onClick={goForward}
               className="rounded-full bg-[#7a4a2e] px-6 py-3 text-[#fff0d5] transition hover:bg-[#925a38] disabled:opacity-25"
             >
               Weiter →
@@ -427,6 +615,100 @@ export default function ClassThankYouBook() {
           </div>
         </div>
       </div>
-    </main>
+    
+      <style jsx global>{`
+        @keyframes castleCandleFlicker {
+          0%,
+          100% {
+            transform: translateX(-50%) scaleX(1) scaleY(1) rotate(-1deg);
+            filter: brightness(1);
+          }
+          20% {
+            transform: translateX(-50%) scaleX(.88) scaleY(1.08) rotate(2deg);
+            filter: brightness(1.12);
+          }
+          42% {
+            transform: translateX(-50%) scaleX(1.08) scaleY(.94) rotate(-2deg);
+            filter: brightness(.96);
+          }
+          63% {
+            transform: translateX(-50%) scaleX(.93) scaleY(1.12) rotate(1deg);
+            filter: brightness(1.16);
+          }
+          82% {
+            transform: translateX(-50%) scaleX(1.04) scaleY(.98) rotate(-1deg);
+          }
+        }
+
+        @keyframes castleInnerFlame {
+          0%,
+          100% {
+            opacity: .72;
+            transform: translateX(-50%) scale(.92);
+          }
+          50% {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.08);
+          }
+        }
+
+        @keyframes castleGlow {
+          0%,
+          100% {
+            opacity: .55;
+            transform: translateX(-50%) scale(.94);
+          }
+          50% {
+            opacity: .9;
+            transform: translateX(-50%) scale(1.08);
+          }
+        }
+
+        @keyframes castleDust {
+          from {
+            background-position:
+              0 0,
+              30px 80px,
+              120px 40px;
+          }
+          to {
+            background-position:
+              35px -110px,
+              5px -45px,
+              85px -85px;
+          }
+        }
+
+        .candle-flame {
+          animation: castleCandleFlicker 1.35s ease-in-out infinite;
+        }
+
+        .candle-flame-inner {
+          animation: castleInnerFlame .9s ease-in-out infinite;
+        }
+
+        .candle-glow {
+          animation: castleGlow 2.1s ease-in-out infinite;
+        }
+
+        .castle-dust {
+          background-image:
+            radial-gradient(circle, rgba(255,222,155,.8) 0 1px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,186,91,.55) 0 1px, transparent 1.5px),
+            radial-gradient(circle, rgba(255,238,191,.45) 0 1px, transparent 1.5px);
+          background-size: 145px 145px, 215px 215px, 285px 285px;
+          animation: castleDust 18s linear infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .candle-flame,
+          .candle-flame-inner,
+          .candle-glow,
+          .castle-dust {
+            animation: none !important;
+          }
+        }
+      `}</style>
+</main>
   );
 }

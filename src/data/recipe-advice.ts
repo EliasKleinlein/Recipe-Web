@@ -53,6 +53,18 @@ export const MASTER_TIPS: Array<[string, string]> = [
   ["Gebratene Eiernudeln", "Nudeln nur knapp vorgaren. Der eigentliche Merge passiert erst im heißen Wok."],
 
   ["Cannabis-Brownies", "Malte, bei diesem Rezept überlasse ich die Code-Review lieber Christophus."],
+
+  ["Caesar-Salat", "Das Dressing wirklich selbst mixen – beim Caesar entscheidet die Sauce über den gesamten Build."],
+  ["Griechischer Salat", "Tomaten und Gurken nicht zu klein schneiden. Ein Bauernsalat darf ruhig Struktur zeigen."],
+  ["Quinoa-Avocado", "Quinoa vollständig auskühlen lassen, bevor die Avocado dazukommt – sonst wird der Green Build unnötig weich."],
+  ["Ziegenkäse-Salat", "Den Ziegenkäse nur kurz erwärmen. Er soll cremig werden und nicht aus seinem eigenen Deployment laufen."],
+  ["Gurkensalat", "Die Gurken kurz im Dressing ziehen lassen – dann bekommt auch die Cool Runtime ordentlich Geschmack."],
+  ["Couscous-Salat", "Tahini erst mit Zitrone verrühren und dann Wasser ergänzen. Nicht erschrecken, wenn es kurz dick wird."],
+  ["Kartoffelsalat", "Das Dressing über die noch warmen Kartoffeln geben. Genau dann nehmen sie den Refactor am besten an."],
+  ["Rote-Bete-Feta", "Feta erst am Ende darübergeben, damit aus dem Red Branch kein komplett rosa Repository wird."],
+  ["Kichererbsen-Salat", "Kichererbsen gründlich abtropfen lassen. Wasser ist hier eine unnötige Dependency."],
+  ["Pasta-Pesto-Salat", "Pesto nicht auf heiße Pasta geben – Basilikum verliert sonst Farbe und der Fresh Commit wird grau."],
+
 ];
 
 export const CHRISTOPHUS_TIPS: Array<[string, string]> = [
@@ -110,6 +122,18 @@ export const CHRISTOPHUS_TIPS: Array<[string, string]> = [
   ["Gebratene Eiernudeln", "Nudeln und Gemüse geprüft. Merge Request akzeptiert."],
 
   ["Cannabis-Brownies", "Malte, du Schlingel – das ist aber nichts für Kinder."],
+
+  ["Caesar-Salat", "Salat, Croutons und selbstgemachtes Dressing geprüft. Interface ist sauber."],
+  ["Griechischer Salat", "Feta, Olive und Oregano geprüft. Stable API liefert korrekt."],
+  ["Quinoa-Avocado", "Quinoa und Avocado geprüft. Green Build tatsächlich grün."],
+  ["Ziegenkäse-Salat", "Honig und Senf geprüft. Sweet-Sour Merge ohne Konflikt."],
+  ["Gurkensalat", "Gurke, Sesam und Dressing geprüft. Runtime angenehm kühl."],
+  ["Couscous-Salat", "Couscous und Tahini-Dressing vollständig geladen. Lazy Load beendet."],
+  ["Kartoffelsalat", "Kartoffeln geprüft. Legacy Refactor funktioniert sogar ohne Mayo."],
+  ["Rote-Bete-Feta", "Rote Bete und Feta geprüft. Red Branch darf ausnahmsweise bestehen bleiben."],
+  ["Kichererbsen-Salat", "Dependencies geprüft. Kichererbsen, Gemüse und Dressing kompatibel."],
+  ["Pasta-Pesto-Salat", "Pesto selbst gebaut. Kein Fertigglas im Dependency Tree gefunden."],
+
 ];
 
 const SAFE_MASTER_FALLBACKS = {

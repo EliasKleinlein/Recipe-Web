@@ -1,13 +1,14 @@
+import ChristophusCompanion from "@/components/ChristophusCompanion";
+import { ArrowDown, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative mx-auto mt-4 min-h-[860px] max-w-[1600px] overflow-hidden rounded-[1.75rem] border border-[#d4a64e]/45 bg-[#140d08] shadow-[0_35px_100px_rgba(0,0,0,.72)] sm:min-h-[920px] lg:aspect-[16/9] lg:min-h-0">
       <Image
         src="/images/fantasy-old-castle-kitchen.webp"
-        alt="Handgemalte alte Burgkueche mit Steinboegen, Feuerstelle, Kupferkesseln und schwerem Holztisch"
+        alt="Handgemalte alte Burgküche mit Steinbögen, Feuerstelle, Kupferkesseln und schwerem Holztisch"
         fill
         priority
         sizes="(max-width: 1660px) 100vw, 1600px"
@@ -42,10 +43,10 @@ export default function Hero() {
           </p>
 
           <Link
-            href="#rezepte"
+            href="#kuechenmeister"
             className="magic-glow mt-3 inline-flex items-center gap-2 rounded-full border border-[#6f3f19]/45 bg-gradient-to-b from-[#d68a2c] to-[#8d4319] px-4 py-2 text-xs font-black text-[#fff1ca] transition hover:-translate-y-1 hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8d4319] sm:mt-5 sm:px-5 sm:py-3 sm:text-sm lg:mt-[clamp(.55rem,1.2vw,1.25rem)]"
           >
-            Renkes Rezepte entdecken <ArrowDown size={17} aria-hidden="true" />
+            Küchenmeister wählen <ArrowDown size={17} aria-hidden="true" />
           </Link>
 
           <div className="mx-auto mt-3 max-w-sm font-mono text-[.52rem] font-bold leading-4 text-[#744014] min-[390px]:text-[.6rem] sm:mt-4 sm:text-xs sm:leading-5 lg:mt-[clamp(.4rem,.75vw,.8rem)] lg:text-[clamp(.54rem,.68vw,.72rem)]">
@@ -58,16 +59,24 @@ export default function Hero() {
       <div className="absolute bottom-[-1%] left-[-15%] z-10 h-[51%] w-[92%] sm:left-[-7%] sm:h-[53%] sm:w-[66%] lg:left-[1%] lg:h-[91%] lg:w-[39%]">
         <Image
           src="/images/renke-chef-transparent.webp"
-          alt="Renke als freigestellter gezeichneter Fantasy-Koch mit schwarzer Kochkleidung und Kochloeffel"
+          alt="Renke als freigestellter gezeichneter Fantasy-Koch mit schwarzer Kochkleidung und Kochlöffel"
           fill
           priority
           sizes="(max-width: 640px) 92vw, (max-width: 1024px) 66vw, 39vw"
           className="object-contain object-bottom drop-shadow-[0_22px_28px_rgba(0,0,0,.75)]"
         />
-        <div className="pointer-events-none absolute left-[43%] top-[57%] hidden -translate-x-1/2 -rotate-2 rounded-md border border-[#c58b36]/25 bg-[#100d0b]/68 px-2 py-1.5 text-center font-mono text-[clamp(6px,.5vw,9px)] leading-[1.45] text-[#edbd5f] shadow-lg lg:block">
-          while(hungry) &#123;<br />&nbsp;&nbsp;cook();<br />&nbsp;&nbsp;eat();<br />&#125;
+        <div
+          className="pointer-events-none absolute left-[48%] top-[34%] hidden -translate-x-1/2 -rotate-2 font-serif text-[clamp(.95rem,1.35vw,1.45rem)] font-bold italic tracking-[.08em] text-[#d9aa55] lg:block"
+          style={{
+            WebkitTextStroke: "0.35px rgba(62, 34, 14, 0.9)",
+            textShadow: "0 1px 0 #5b3619, 0 -1px 0 #f4d17a, 1px 0 0 #6f451e, -1px 0 0 #6f451e, 0 2px 3px rgba(0,0,0,.72)",
+          }}
+        >
+          Renke
         </div>
       </div>
+
+      <ChristophusCompanion />
 
       <p className="absolute bottom-4 right-5 z-30 hidden rounded-full border border-[#f1c56c]/35 bg-[#140d08]/72 px-4 py-2 font-serif text-xs italic text-[#f5d895] shadow-lg backdrop-blur-sm sm:block">
         Kompiliert mit einer Prise Magie
