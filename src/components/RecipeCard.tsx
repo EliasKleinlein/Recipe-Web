@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { ChefHat, Clock3, ScrollText, UsersRound } from "lucide-react";
 
 type RecipeCardProps = {
   id: number;
@@ -12,73 +13,35 @@ type RecipeCardProps = {
   image: string | null;
 };
 
-export default function RecipeCard({
-  id,
-  title,
-  originalTitle,
-  category,
-  duration,
-  servings,
-  notes,
-  image,
-}: RecipeCardProps) {
+export default function RecipeCard({ id, title, originalTitle, category, duration, servings, notes, image }: RecipeCardProps) {
   return (
-    <Link
-      href={`/recipes/${id}`}
-      className="group block overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-900/85 shadow-xl transition duration-300 hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-2xl hover:shadow-orange-950/30"
-    >
-      <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-orange-950 to-zinc-950">
+    <Link href={`/recipes/${id}`} className="paper-panel group block overflow-hidden rounded-[1.6rem] border border-[#7d4f25]/60 shadow-[0_18px_45px_rgba(0,0,0,.35)] transition duration-300 hover:-translate-y-2 hover:rotate-[.25deg] hover:shadow-[0_24px_55px_rgba(218,145,44,.2)]">
+      <div className="relative aspect-[4/3] overflow-hidden border-b border-[#815126]/35 bg-[radial-gradient(circle_at_50%_42%,#d99a3d_0%,#75401f_38%,#17101a_100%)]">
         {image ? (
-          <Image
-            src={image}
-            alt={originalTitle}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover transition duration-500 group-hover:scale-105"
-          />
+          <Image src={image} alt={originalTitle} fill sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover saturate-[.82] transition duration-700 group-hover:scale-105" />
         ) : (
-          <div className="flex h-full items-center justify-center">
-            <span className="text-6xl transition duration-300 group-hover:scale-110">
-              🍽️
-            </span>
+          <div className="absolute inset-0 grid place-items-center">
+            <div className="absolute inset-5 rounded-[50%] border border-[#ffd984]/25 bg-[repeating-radial-gradient(circle_at_center,transparent_0_18px,rgba(255,220,147,.08)_19px_20px)]" />
+            <div className="relative grid h-28 w-28 place-items-center rounded-full border border-[#f2ce7d]/35 bg-[#25150f]/65 text-[#f0c86f] shadow-[0_0_35px_rgba(245,173,55,.24)]">
+              <ChefHat size={54} strokeWidth={1.2} aria-hidden="true" />
+            </div>
+            <span className="absolute bottom-4 rounded-full bg-black/35 px-3 py-1 text-[10px] font-bold uppercase tracking-[.2em] text-[#f1d89f]">Fantasy-Illustration folgt</span>
           </div>
         )}
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-
-        <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-black/55 px-3 py-1 text-xs font-semibold text-orange-200 backdrop-blur">
-          {category}
-        </span>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#170d08]/75 via-transparent to-transparent" />
+        <span className="absolute left-4 top-4 rounded-full border border-[#f4d18d]/35 bg-[#27160e]/80 px-3 py-1.5 text-xs font-bold text-[#f4d18d] backdrop-blur">{category}</span>
       </div>
 
-      <div className="p-5">
-        <p className="text-xs font-medium uppercase tracking-[0.22em] text-orange-400">
-          {originalTitle}
-        </p>
-
-        <h2 className="mt-2 text-xl font-black leading-snug text-white">
-          {title}
-        </h2>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          <span className="rounded-full bg-white/5 px-3 py-1.5 text-sm text-zinc-300">
-            ⏱ {duration} Min.
-          </span>
-
-          <span className="rounded-full bg-white/5 px-3 py-1.5 text-sm text-zinc-300">
-            👥 {servings} Portionen
-          </span>
+      <div className="relative p-6 text-[#3b2718]">
+        <ScrollText className="absolute right-5 top-5 rotate-6 text-[#a36a2c]/24" size={48} strokeWidth={1.2} aria-hidden="true" />
+        <p className="max-w-[80%] text-xs font-bold uppercase tracking-[.18em] text-[#925421]">{originalTitle}</p>
+        <h2 className="fantasy-title mt-2 text-3xl font-bold leading-[1.02] text-[#3a2415]">{title}</h2>
+        <div className="mt-5 flex flex-wrap gap-2 text-sm font-semibold text-[#654328]">
+          <span className="flex items-center gap-1.5 rounded-full border border-[#80512a]/20 bg-[#7f5128]/[.08] px-3 py-1.5"><Clock3 size={15} /> {duration} Min.</span>
+          <span className="flex items-center gap-1.5 rounded-full border border-[#80512a]/20 bg-[#7f5128]/[.08] px-3 py-1.5"><UsersRound size={15} /> {servings} Portionen</span>
         </div>
-
-        {notes && (
-          <p className="mt-5 border-l-2 border-orange-500 pl-3 text-sm italic leading-6 text-zinc-400">
-            „{notes}“
-          </p>
-        )}
-
-        <div className="mt-5 text-sm font-semibold text-orange-400 transition group-hover:translate-x-1">
-          Rezept ansehen →
-        </div>
+        {notes && <p className="mt-5 border-l-2 border-[#bc782f] pl-3 font-serif text-sm italic leading-6 text-[#674a35]">„{notes}“</p>}
+        <div className="mt-5 font-bold text-[#8e4d1e] transition group-hover:translate-x-1">Rezeptrolle öffnen →</div>
       </div>
     </Link>
   );
