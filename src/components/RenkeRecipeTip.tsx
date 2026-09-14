@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ChristophusAdvice from "@/components/ChristophusAdvice";
+import { getMasterTip } from "@/data/recipe-advice";
 
 type MasterId = "renke" | "walter" | "malte";
 
@@ -8,28 +9,6 @@ type TipProps = {
   category: string;
   tags?: string | null;
 };
-
-const SPECIFIC_TIPS: Array<[string, string]> = [
-  ["Cannabis-Brownies", "Dieser Build wird von mir garantiert niemals ausgeführt!"],
-  ["Schweinehaxe", "Die Kruste muss lauter knacken als deine Tastatur."],
-  ["Debugger-Bolognese", "Die Soße lange köcheln lassen – gute Bugs brauchen schließlich auch Zeit."],
-  ["Merge-Conflict", "Saubere Schichten verhindern Konflikte auf dem Teller."],
-  ["Stack Overflow", "Den Topf nicht bis zum letzten Byte füllen."],
-  ["Boolean-Beast", "Käse geschmolzen? true. Hunger? gleich false."],
-  ["Commit-Crash", "Erst abschmecken, dann den finalen Commit setzen."],
-  ["Stable Release", "Käsekuchen im ausgeschalteten Ofen abkühlen lassen – so bleibt der Release stabil."],
-  ["Dark Mode", "Je dunkler die Schokolade, desto besser der Dark Mode."],
-  ["Runtime Error", "Brownies rechtzeitig herausnehmen – trocken ist kein Feature."],
-  ["Promise-All", "Erst wenden, wenn alle Bläschen gleichzeitig aufgelöst sind."],
-  ["While-Schleife", "Nicht endlos rollen – einmal fest einschlagen reicht."],
-  ["Not Found", "Leere Keksdose? Dann war das Deployment erfolgreich."],
-  ["Server-Load", "Ein guter Braten braucht Geduld – Überhitzung ist nur im Serverraum sinnvoll."],
-  ["Bugfix-Rahm", "Pilze kräftig anbraten, dann läuft auch die Rahmsoße stabil."],
-  ["Compile-Kruste", "Die Kruste darf dunkel werden – Hauptsache, der Kern bleibt weich und warm."],
-  ["Syntax-Garden", "Rosmarin, Öl und Salz sind die schönste Syntax für gutes Brot."],
-  ["Sweet Commit", "Äpfel fächerförmig legen – dann sieht selbst das Dessert nach Premium-Release aus."],
-  ["Dark Mode Deluxe", "Schokolade und Kirschen sind das perfekte Duo für süße Nachtarbeit."],
-];
 
 const MASTER_META: Record<
   MasterId,
@@ -74,16 +53,18 @@ function chooseMaster(title: string, category: string, tags?: string | null): Ma
   return "renke";
 }
 
-function getTip(title: string, master: MasterId) {
-  const specificTip = SPECIFIC_TIPS.find(([recipeName]) => title.includes(recipeName))?.[1];
-  if (specificTip) return specificTip;
-  return MASTER_META[master].fallbackTip;
+function getTip(
+  title: string,
+  category: string,
+  tags?: string | null,
+) {
+  return getMasterTip(title, category, tags);
 }
 
 export default function RenkeRecipeTip({ title, category, tags }: TipProps) {
   const master = chooseMaster(title, category, tags);
   const meta = MASTER_META[master];
-  const tip = getTip(title, master);
+  const tip = getTip(title, category, tags);
 
   return (
     <>

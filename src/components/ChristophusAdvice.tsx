@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getChristophusTip } from "@/data/recipe-advice";
 
 type ChristophusAdviceProps = {
   title: string;
@@ -6,105 +7,12 @@ type ChristophusAdviceProps = {
   tags?: string | null;
 };
 
-const SPECIAL_ADVICE: Array<[string, string]> = [
-  ["Cannabis-Brownies", "Malte, du Schlingel – das ist aber nichts für Kinder."],
-];
-
-const GENERAL_ADVICE = [
-  "Renke, ich hab da noch was.",
-  "Fast richtig. Aber fast zählt im Debugger nicht.",
-  "Der Fehler war klein. Ich hab ihn trotzdem gesehen.",
-  "Ich wollte nichts sagen. Dann hab ich's gesehen.",
-  "Keine Sorge, ich korrigiere nur kurz den Lehrer.",
-  "Sieht richtig aus. Ich prüfe es trotzdem.",
-  "Kein Bug gefunden. Das macht mich misstrauisch.",
-  "Ich habe den Randfall entdeckt.",
-  "Funktioniert. Aber elegant ist anders.",
-  "Jetzt stimmt's.",
-  "Wenn ich schweige, darfst du wirklich zufrieden sein.",
-  "Der Lehrer erklärt. Ich validiere.",
-  "Ich hab's überprüft. Jetzt kannst du weitermachen.",
-  "Der Fehler war gut versteckt. Leider nicht gut genug.",
-  "Ich korrigiere ungern. Aber konsequent.",
-  "Kein Bug. Noch.",
-];
-
-const FISH_ADVICE = [
-  "Renke, der Fisch stimmt. Ich habe trotzdem zweimal geprüft.",
-  "Garzeit korrekt. Das hätte ich dir fast durchgehen lassen.",
-  "Beim Fisch zählt Timing. Beim Unterricht übrigens auch.",
-  "Kein Fehler im Lachs gefunden. Ungewöhnlich.",
-  "Der Kabeljau kompiliert. Ich bin zufrieden. Vorläufig.",
-];
-
-const VEGETARIAN_ADVICE = [
-  "Vegetarisch korrekt. Logik ebenfalls. Ich bin enttäuscht.",
-  "Ich habe Gemüse und Code geprüft. Beides läuft.",
-  "Kein Fleisch, kein Fehler. Zufall?",
-  "Das Risotto ist synchron. Sehr verdächtig.",
-  "Ich wollte korrigieren. Aber diesmal stimmt es.",
-];
-
-const BREAD_ADVICE = [
-  "Walter, Backzeit stimmt. Ich hab nachgerechnet.",
-  "Der Teig geht auf. Die Logik auch.",
-  "Ich habe den Randfall gefunden. Er heißt Kruste.",
-  "Backen ist nur Debugging mit Hefe.",
-  "Walter, funktioniert. Aber ich behalte den Ofen im Auge.",
-];
-
-const SWEET_ADVICE = [
-  "Malte, geschmacklich top. Ich prüfe trotzdem die Logik.",
-  "Die Schichten stimmen. Ich habe nachgezählt.",
-  "Kein Fehler im Kuchen. Das beunruhigt mich.",
-  "Zucker ist kein Ersatz für saubere Architektur.",
-  "Dessert bestanden. Code Review folgt trotzdem.",
-];
-
-const FISH_WORDS =
-  /fisch|lachs|kabeljau|garnele|garnelen|meeresfrüchte|meeresfruechte/i;
-
-const VEGETARIAN_WORDS =
-  /vegetarisch|vegan|gemüse|gemuese|kichererbse|risotto|pilz/i;
-
-const BREAD_WORDS =
-  /brot|backstube|brötchen|broetchen|focaccia|baguette|ciabatta|hefe|laib/i;
-
-const SWEET_WORDS =
-  /kuchen|torte|dessert|brownie|keks|pancake|schokolade|schoko|tiramisu|tarte|süß|suess|gebäck|gebaeck/i;
-
-function stableIndex(text: string, length: number) {
-  let hash = 0;
-
-  for (let i = 0; i < text.length; i += 1) {
-    hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
-  }
-
-  return hash % length;
-}
-
-function getAdvice(title: string, category: string, tags?: string | null) {
-  const specialAdvice = SPECIAL_ADVICE.find(([recipeName]) =>
-    title.includes(recipeName),
-  )?.[1];
-
-  if (specialAdvice) return specialAdvice;
-
-  const text = `${title} ${category} ${tags ?? ""}`;
-
-  let pool = GENERAL_ADVICE;
-
-  if (FISH_WORDS.test(text)) {
-    pool = FISH_ADVICE;
-  } else if (SWEET_WORDS.test(text)) {
-    pool = SWEET_ADVICE;
-  } else if (BREAD_WORDS.test(text)) {
-    pool = BREAD_ADVICE;
-  } else if (VEGETARIAN_WORDS.test(text)) {
-    pool = VEGETARIAN_ADVICE;
-  }
-
-  return pool[stableIndex(title, pool.length)];
+function getAdvice(
+  title: string,
+  category: string,
+  tags?: string | null,
+) {
+  return getChristophusTip(title, category, tags);
 }
 
 export default function ChristophusAdvice({
