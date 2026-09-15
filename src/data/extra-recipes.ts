@@ -751,4 +751,357 @@ Pasta mit Pesto vermengen und anschließend Tomaten, Mozzarella und Rucola vorsi
     tags: "vegetarisch,salat,pasta,pesto,basilikum,dressing"
   },
 
+  {
+    title: "Renkes Bauernbrot à la Stable Branch",
+    original_title: "Kräftiges Bauernbrot",
+    category: "Backstube",
+    duration: 180,
+    servings: 1,
+    image: "/images/recipes/bauernbrot-stable-branch.webp",
+    ingredients: `350 g Weizenmehl Type 550
+150 g Roggenmehl Type 1150
+10 g Salz
+7 g Trockenhefe
+1 TL Honig
+350 ml lauwarmes Wasser
+1 EL Apfelessig`,
+    instructions: `Weizenmehl und Roggenmehl in einer großen Schüssel mischen.
+
+Hefe und Honig im lauwarmen Wasser auflösen.
+
+Hefewasser, Salz und Apfelessig zum Mehl geben und alles 8 bis 10 Minuten zu einem glatten Teig kneten.
+
+Den Teig abgedeckt etwa 90 Minuten gehen lassen.
+
+Anschließend zu einem runden Laib formen und nochmals 30 Minuten ruhen lassen.
+
+Backofen auf 230 °C Ober-/Unterhitze vorheizen.
+
+Das Brot einschneiden und 15 Minuten bei 230 °C backen.
+
+Temperatur auf 200 °C reduzieren und weitere 30 bis 35 Minuten backen.
+
+Vor dem Anschneiden vollständig auskühlen lassen.`,
+    notes: "Walter prüft jeden Branch. Dieser hier ist stabil, knusprig und produktionsreif.",
+    tags: "walter,backstube,brot,bauernbrot,roggen,hefe"
+  },
+  {
+    title: "Renkes Laugenbrötchen à la Backend Batch",
+    original_title: "Hausgemachte Laugenbrötchen",
+    category: "Backstube",
+    duration: 135,
+    servings: 8,
+    image: "/images/recipes/laugenbroetchen-backend-batch.webp",
+    ingredients: `500 g Weizenmehl Type 550
+300 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+30 g weiche Butter
+1 l Wasser
+40 g Natron
+grobes Salz`,
+    instructions: `Hefe und Zucker im lauwarmen Wasser auflösen.
+
+Mehl, Salz, Butter und Hefewasser zu einem glatten Teig kneten.
+
+Abgedeckt etwa 60 Minuten gehen lassen.
+
+Teig in 8 Stücke teilen und zu Brötchen formen.
+
+Nochmals 20 Minuten ruhen lassen.
+
+1 Liter Wasser aufkochen, Hitze reduzieren und Natron vorsichtig einrühren.
+
+Jedes Brötchen etwa 30 Sekunden in die Lauge geben und anschließend auf ein Backblech legen.
+
+Brötchen einschneiden und mit grobem Salz bestreuen.
+
+Bei 210 °C Ober-/Unterhitze etwa 18 bis 20 Minuten backen.`,
+    notes: "Acht Brötchen gleichzeitig deployt. Backend Batch erfolgreich abgeschlossen.",
+    tags: "walter,backstube,laugenbroetchen,broetchen,hefe,lauge"
+  },
+  {
+    title: "Renkes Focaccia à la Olive Commit",
+    original_title: "Focaccia mit Rosmarin und Olivenöl",
+    category: "Backstube",
+    duration: 150,
+    servings: 6,
+    image: "/images/recipes/focaccia-olive-commit.webp",
+    ingredients: `500 g Weizenmehl Type 550
+350 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+5 EL Olivenöl
+2 Zweige Rosmarin
+grobes Meersalz`,
+    instructions: `Hefe und Zucker im Wasser auflösen.
+
+Mehl, Salz und 2 EL Olivenöl dazugeben und zu einem weichen Teig kneten.
+
+Abgedeckt etwa 90 Minuten gehen lassen.
+
+Teig auf ein gut geöltes Backblech geben und vorsichtig auseinanderziehen.
+
+Mit den Fingern typische Mulden in den Teig drücken.
+
+Restliches Olivenöl darübergeben.
+
+Rosmarin und grobes Meersalz verteilen.
+
+Nochmals 20 Minuten ruhen lassen.
+
+Bei 220 °C Ober-/Unterhitze etwa 20 bis 25 Minuten goldbraun backen.`,
+    notes: "Olivenöl committed. Rosmarin reviewed. Walter approved.",
+    tags: "walter,backstube,focaccia,hefe,rosmarin,olivenoel"
+  },
+  {
+    title: "Renkes Zwiebelbrot à la Layered Architecture",
+    original_title: "Herzhaftes Zwiebelbrot",
+    category: "Backstube",
+    duration: 160,
+    servings: 1,
+    image: "/images/recipes/zwiebelbrot-layered-architecture.webp",
+    ingredients: `500 g Weizenmehl Type 550
+320 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+2 große Zwiebeln
+2 EL Butter
+1 TL Kümmel optional`,
+    instructions: `Zwiebeln fein würfeln und in Butter langsam goldbraun rösten.
+
+Abkühlen lassen.
+
+Hefe und Zucker im Wasser auflösen.
+
+Mehl, Salz und Hefewasser zu einem glatten Teig kneten.
+
+Zum Schluss die gerösteten Zwiebeln unterarbeiten.
+
+Teig abgedeckt etwa 90 Minuten gehen lassen.
+
+Zu einem Laib formen und nochmals 20 Minuten ruhen lassen.
+
+Nach Wunsch mit Kümmel bestreuen.
+
+Bei 210 °C Ober-/Unterhitze etwa 35 bis 40 Minuten backen.`,
+    notes: "Schicht für Schicht aufgebaut. Die Zwiebeln bilden hier eindeutig die Service Layer.",
+    tags: "walter,backstube,zwiebelbrot,brot,hefe,zwiebeln"
+  },
+  {
+    title: "Renkes Knoblauch-Kräuter-Baguette à la Garlic Patch",
+    original_title: "Knoblauch-Kräuter-Baguette",
+    category: "Backstube",
+    duration: 140,
+    servings: 2,
+    image: "/images/recipes/knoblauch-baguette-garlic-patch.webp",
+    ingredients: `500 g Weizenmehl Type 550
+320 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+80 g weiche Butter
+3 Knoblauchzehen
+2 EL gehackte Petersilie
+1 EL gehackter Schnittlauch`,
+    instructions: `Hefe und Zucker im Wasser auflösen.
+
+Mit Mehl und Salz zu einem glatten Teig kneten.
+
+Abgedeckt etwa 75 Minuten gehen lassen.
+
+Teig halbieren und zu zwei Baguettes formen.
+
+Nochmals 20 Minuten ruhen lassen.
+
+Butter mit fein gehacktem Knoblauch und Kräutern verrühren.
+
+Baguettes längs leicht einschneiden und etwas Kräuterbutter hineingeben.
+
+Bei 220 °C Ober-/Unterhitze etwa 20 bis 25 Minuten backen.
+
+Restliche Kräuterbutter direkt nach dem Backen auf den heißen Baguettes verteilen.`,
+    notes: "Garlic Patch eingespielt. Seitdem meldet niemand mehr fehlenden Geschmack.",
+    tags: "walter,backstube,baguette,knoblauch,kraeuter,hefe"
+  },
+  {
+    title: "Renkes Vollkornbrötchen à la Production Build",
+    original_title: "Kernige Vollkornbrötchen",
+    category: "Backstube",
+    duration: 135,
+    servings: 8,
+    image: "/images/recipes/vollkornbroetchen-production-build.webp",
+    ingredients: `300 g Weizenvollkornmehl
+200 g Weizenmehl Type 550
+320 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Honig
+10 g Salz
+40 g Sonnenblumenkerne
+30 g Kürbiskerne
+20 g Leinsamen`,
+    instructions: `Hefe und Honig im Wasser auflösen.
+
+Beide Mehlsorten mit Salz und der Hälfte der Kerne mischen.
+
+Hefewasser dazugeben und alles 8 Minuten kneten.
+
+Teig abgedeckt etwa 70 Minuten gehen lassen.
+
+In 8 Portionen teilen und zu Brötchen formen.
+
+Brötchen mit Wasser bepinseln und in den restlichen Kernen wälzen.
+
+Nochmals 20 Minuten gehen lassen.
+
+Bei 210 °C Ober-/Unterhitze etwa 20 Minuten backen.`,
+    notes: "Keine Beta-Version. Diese Brötchen sind direkt Production Ready.",
+    tags: "walter,backstube,vollkorn,broetchen,koerner,hefe"
+  },
+  {
+    title: "Renkes Ciabatta à la Async Fermentation",
+    original_title: "Italienisches Ciabatta",
+    category: "Backstube",
+    duration: 240,
+    servings: 2,
+    image: "/images/recipes/ciabatta-async-fermentation.webp",
+    ingredients: `500 g Weizenmehl Type 550
+400 ml lauwarmes Wasser
+7 g Trockenhefe
+10 g Salz
+2 EL Olivenöl`,
+    instructions: `Hefe im Wasser auflösen.
+
+Mehl und Salz mischen.
+
+Wasser und Olivenöl dazugeben und zu einem sehr weichen Teig verrühren.
+
+Nicht zusätzlich mit Mehl fest machen.
+
+Teig abgedeckt etwa 2 Stunden gehen lassen.
+
+Währenddessen den Teig zweimal vorsichtig von außen zur Mitte falten.
+
+Auf eine stark bemehlte Fläche geben.
+
+In zwei längliche Stücke teilen und möglichst wenig entgasen.
+
+Auf ein Backblech legen und nochmals 30 Minuten ruhen lassen.
+
+Bei 230 °C Ober-/Unterhitze etwa 22 bis 25 Minuten backen.`,
+    notes: "Die Fermentation läuft asynchron. Walter wartet geduldig auf das Callback.",
+    tags: "walter,backstube,ciabatta,hefe,italienisch,olivenoel"
+  },
+  {
+    title: "Renkes Käse-Schinken-Hörnchen à la Wrapped Component",
+    original_title: "Herzhafte Käse-Schinken-Hörnchen",
+    category: "Backstube",
+    duration: 120,
+    servings: 8,
+    image: "/images/recipes/kaese-schinken-hoernchen-wrapped-component.webp",
+    ingredients: `500 g Weizenmehl Type 550
+250 ml lauwarme Milch
+7 g Trockenhefe
+1 TL Zucker
+8 g Salz
+60 g weiche Butter
+150 g Kochschinken
+150 g geriebener Gouda
+1 Ei`,
+    instructions: `Hefe und Zucker in der lauwarmen Milch auflösen.
+
+Mehl, Salz, Butter und Hefemilch zu einem glatten Teig kneten.
+
+Abgedeckt etwa 60 Minuten gehen lassen.
+
+Teig rund ausrollen und in 8 Dreiecke schneiden.
+
+Schinken und Käse auf die breite Seite der Dreiecke geben.
+
+Von außen nach innen aufrollen und zu Hörnchen formen.
+
+Auf ein Backblech legen und 15 Minuten ruhen lassen.
+
+Mit verquirltem Ei bestreichen.
+
+Bei 200 °C Ober-/Unterhitze etwa 18 bis 20 Minuten backen.`,
+    notes: "Füllung sauber gewrappt. Kein Content Leakage im Component.",
+    tags: "walter,backstube,hoernchen,kaese,schinken,hefe"
+  },
+  {
+    title: "Renkes Pizza Bianca à la White Theme",
+    original_title: "Pizza Bianca mit Rosmarin und Mozzarella",
+    category: "Backstube",
+    duration: 150,
+    servings: 4,
+    image: "/images/recipes/pizza-bianca-white-theme.webp",
+    ingredients: `500 g Pizzamehl oder Weizenmehl Type 550
+325 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+3 EL Olivenöl
+200 g Mozzarella
+2 Zweige Rosmarin
+50 g Parmesan
+grobes Meersalz`,
+    instructions: `Hefe und Zucker im Wasser auflösen.
+
+Mehl, Salz und Olivenöl dazugeben und zu einem elastischen Teig kneten.
+
+Abgedeckt etwa 90 Minuten gehen lassen.
+
+Teig auf einem Backblech dünn ausziehen.
+
+Mozzarella zupfen und darauf verteilen.
+
+Mit Parmesan, Rosmarin und etwas Meersalz bestreuen.
+
+Mit etwas Olivenöl beträufeln.
+
+Bei 240 °C Ober-/Unterhitze etwa 12 bis 15 Minuten backen.`,
+    notes: "White Theme aktiviert. Geschmack bleibt trotzdem High Contrast.",
+    tags: "walter,backstube,pizza,pizza-bianca,hefe,mozzarella"
+  },
+  {
+    title: "Renkes Brezel à la Infinite Loop",
+    original_title: "Klassische Laugenbrezeln",
+    category: "Backstube",
+    duration: 135,
+    servings: 8,
+    image: "/images/recipes/brezel-infinite-loop.webp",
+    ingredients: `500 g Weizenmehl Type 550
+280 ml lauwarmes Wasser
+7 g Trockenhefe
+1 TL Zucker
+10 g Salz
+30 g Butter
+1 l Wasser
+40 g Natron
+grobes Salz`,
+    instructions: `Hefe und Zucker im Wasser auflösen.
+
+Mehl, Salz, Butter und Hefewasser zu einem festen, glatten Teig kneten.
+
+Abgedeckt etwa 60 Minuten gehen lassen.
+
+Teig in 8 Stücke teilen.
+
+Jedes Stück zu einer langen Rolle formen, in der Mitte dicker lassen und zu einer Brezel schlingen.
+
+Nochmals 15 Minuten ruhen lassen.
+
+Wasser aufkochen und Natron vorsichtig einrühren.
+
+Brezeln jeweils etwa 30 Sekunden in die Lauge geben.
+
+Auf ein Backblech legen, dicke Stelle einschneiden und mit grobem Salz bestreuen.
+
+Bei 210 °C Ober-/Unterhitze etwa 18 bis 20 Minuten backen.`,
+    notes: "Loop geschlossen, Knoten stabil, keine Endlosschleife im Ofen.",
+    tags: "walter,backstube,brezel,lauge,hefe,gebaeck"
+  },
 ];
