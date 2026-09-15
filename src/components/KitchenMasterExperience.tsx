@@ -76,17 +76,17 @@ export default function KitchenMasterExperience({ recipes }: { recipes: RecipeCa
   const [activeMaster, setActiveMaster] = useState<MasterId>("all");
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<RecipeCardData[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchError, setSearchError] = useState("");
 
   const filteredRecipes = useMemo(() => {
-    const masterFiltered = recipes.filter((recipe) => belongsToMaster(recipe, activeMaster));
-    const normalizedQuery = submittedQuery.trim().toLocaleLowerCase("de-DE");
+    const sourceRecipes = submittedQuery ? searchResults : recipes;
 
-    if (!normalizedQuery) return masterFiltered;
-
-    return masterFiltered.filter((recipe) =>
-      recipeText(recipe).toLocaleLowerCase("de-DE").includes(normalizedQuery),
+    return sourceRecipes.filter((recipe) =>
+      belongsToMaster(recipe, activeMaster),
     );
-  }, [activeMaster, recipes, submittedQuery]);
+  }, [activeMaster, recipes, searchResults, submittedQuery]);
 
   const activeLabel = MASTERS.find((master) => master.id === activeMaster)?.name;
   const webSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(`${submittedQuery || query} Rezept`)}`;
@@ -97,17 +97,55 @@ export default function KitchenMasterExperience({ recipes }: { recipes: RecipeCa
     if (master !== "brixel") setQuery("");
   }
 
-  function searchArchive(event: FormEvent<HTMLFormElement>) {
+  async function searchArchive(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const normalizedQuery = query.trim();
+
     setActiveMaster("brixel");
-    setSubmittedQuery(query.trim());
-    document.querySelector("#rezepte")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setSearchError("");
+
+    if (!normalizedQuery) {
+      setSubmittedQuery("");
+      setSearchResults([]);
+      return;
+    }
+
+    setIsSearching(true);
+
+    try {
+      const response = await fetch(
+        `/api/recipes/search?q=${encodeURIComponent(normalizedQuery)}`,
+      );
+
+      if (!response.ok) {
+        throw new Error("Suche fehlgeschlagen");
+      }
+
+      const data: { recipes: RecipeCardData[] } = await response.json();
+
+      setSearchResults(data.recipes);
+      setSubmittedQuery(normalizedQuery);
+
+      document.querySelector("#rezepte")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } catch {
+      setSearchError(
+        "Meister Brixel konnte das Rezeptarchiv gerade nicht durchsuchen.",
+      );
+    } finally {
+      setIsSearching(false);
+    }
   }
 
   function resetSelection() {
     setActiveMaster("all");
     setQuery("");
     setSubmittedQuery("");
+    setSearchResults([]);
+    setSearchError("");
   }
 
   return (
@@ -157,8 +195,20 @@ export default function KitchenMasterExperience({ recipes }: { recipes: RecipeCa
                 placeholder="Welche Zutaten hast du?"
                 className="min-w-0 flex-1 rounded-full border border-[#d5b66c]/45 bg-[#fff1c9] px-5 py-3 font-serif text-[#382414] outline-none placeholder:text-[#7f6a54] focus:border-[#f0cb72] focus:ring-2 focus:ring-[#f0cb72]/35"
               />
-              <button type="submit" className="magic-glow rounded-full bg-[#294477] px-6 py-3 font-bold text-[#fff0c1] transition hover:-translate-y-1 hover:bg-[#385a98]">Archiv durchsuchen</button>
+              <button
+                type="submit"
+                disabled={isSearching}
+                className="magic-glow rounded-full bg-[#294477] px-6 py-3 font-bold text-[#fff0c1] transition hover:-translate-y-1 hover:bg-[#385a98] disabled:cursor-wait disabled:opacity-60"
+              >
+                {isSearching ? "Brixel sucht..." : "Archiv durchsuchen"}
+              </button>
             </form>
+            {searchError && (
+              <p className="mt-4 rounded-xl border border-red-400/30 bg-red-950/30 px-4 py-3 text-sm font-semibold text-red-200">
+                {searchError}
+              </p>
+            )}
+
             {(query || submittedQuery) && (
               <a href={webSearchUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#f1ca72] underline decoration-[#f1ca72]/35 underline-offset-4 hover:text-[#ffe5a5]">Mit „{submittedQuery || query}“ im Web weitersuchen ↗</a>
             )}
