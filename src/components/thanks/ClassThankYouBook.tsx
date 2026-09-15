@@ -108,6 +108,16 @@ export default function ClassThankYouBook() {
   const [messages, setMessages] = useState<Record<string, string>>({});
 
   useEffect(() => {
+    people
+      .map((person) => person.portrait)
+      .filter((portrait): portrait is string => Boolean(portrait))
+      .forEach((portrait) => {
+        const img = new window.Image();
+        img.src = portrait;
+      });
+  }, []);
+
+  useEffect(() => {
     fetch("/api/thanks")
       .then((response) => {
         if (!response.ok) {
