@@ -77,6 +77,32 @@ export async function getRecipes() {
   return z.array(RecipeSchema).parse(recipes).map(withRenkeRecipeImage);
 }
 
+export async function searchRecipes(query: string) {
+  const normalizedQuery = query.trim();
+
+  if (!normalizedQuery) {
+    return [];
+  }
+
+  const pattern = `%${normalizedQuery}%`;
+
+  const recipes: unknown = await sql`
+    SELECT *
+    FROM recipes
+    WHERE
+      title ILIKE ${pattern}
+      OR original_title ILIKE ${pattern}
+      OR category ILIKE ${pattern}
+      OR ingredients ILIKE ${pattern}
+      OR notes ILIKE ${pattern}
+      OR tags ILIKE ${pattern}
+    ORDER BY created_at DESC
+    LIMIT 50
+  `;
+
+  return z.array(RecipeSchema).parse(recipes).map(withRenkeRecipeImage);
+}
+
 export async function getRecipeById(id: number) {
   const recipeId = RecipeIdSchema.parse(id);
   const rows: unknown[] = await sql`
