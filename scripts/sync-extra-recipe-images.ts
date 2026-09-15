@@ -24,21 +24,28 @@ for (const block of blocks) {
   }
 }
 
-let updated = 0;
+async function main() {
+  let updated = 0;
 
-for (const recipe of entries) {
-  const result = await sql`
-    UPDATE recipes
-    SET image = ${recipe.image}
-    WHERE title = ${recipe.title}
-       OR original_title = ${recipe.originalTitle}
-    RETURNING id
-  `;
+  for (const recipe of entries) {
+    const result = await sql`
+      UPDATE recipes
+      SET image = ${recipe.image}
+      WHERE title = ${recipe.title}
+         OR original_title = ${recipe.originalTitle}
+      RETURNING id
+    `;
 
-  if (result.length > 0) {
-    updated += result.length;
-    console.log(`✓ Bild gesetzt: ${recipe.title} -> ${recipe.image}`);
+    if (result.length > 0) {
+      updated += result.length;
+      console.log(`✓ Bild gesetzt: ${recipe.title} -> ${recipe.image}`);
+    }
   }
+
+  console.log(`Fertig. Aktualisierte Datensätze: ${updated}`);
 }
 
-console.log(`Fertig. Aktualisierte Datensätze: ${updated}`);
+main().catch((error) => {
+  console.error("Fehler beim Synchronisieren:", error);
+  process.exit(1);
+});

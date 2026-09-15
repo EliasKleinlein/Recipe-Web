@@ -257,9 +257,9 @@ Einrollen und servieren.`,
     tags: 'wraps,hähnchen,snack'
   },
   {
-    title: 'Renkes 404-Kekse à la Not Found',
+    title: "Maltes 404-Kekse à la Not Found",
     original_title: 'Chocolate Chip Cookies',
-    category: 'Gebäck',
+    category: "Malte",
     duration: 35,
     servings: 16,
     image: null,

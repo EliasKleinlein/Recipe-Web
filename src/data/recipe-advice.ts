@@ -65,6 +65,17 @@ export const MASTER_TIPS: Array<[string, string]> = [
   ["Kichererbsen-Salat", "Kichererbsen gründlich abtropfen lassen. Wasser ist hier eine unnötige Dependency."],
   ["Pasta-Pesto-Salat", "Pesto nicht auf heiße Pasta geben – Basilikum verliert sonst Farbe und der Fresh Commit wird grau."],
 
+
+  ["Bauernbrot", "Kruste kräftig ausbacken und das Brot vollständig auskühlen lassen. Ein Stable Branch wird nicht zu früh angeschnitten."],
+  ["Laugenbrötchen", "Die Brötchen nur kurz laugen und anschließend sofort backen. Der Backend Batch wartet nicht gern."],
+  ["Focaccia", "Beim Eindrücken der Mulden ruhig bis fast zum Boden gehen. Dort sammelt sich der Olive Commit."],
+  ["Zwiebelbrot", "Die Zwiebeln vor dem Einkneten vollständig abkühlen lassen. Sonst kollabiert die Layered Architecture."],
+  ["Knoblauch-Kräuter-Baguette", "Kräuterbutter erst kurz vor dem Backen einarbeiten. Der Garlic Patch soll frisch bleiben."],
+  ["Vollkornbrötchen", "Die Kerne leicht anfeuchten, damit sie beim Production Build zuverlässig am Brötchen bleiben."],
+  ["Ciabatta", "Den weichen Teig möglichst wenig entgasen. Die Async Fermentation hat diese Luftblasen hart erarbeitet."],
+  ["Käse-Schinken-Hörnchen", "Die Füllung nicht bis an den Rand legen, damit der Wrapped Component beim Backen geschlossen bleibt."],
+  ["Pizza Bianca", "Mozzarella gut abtropfen lassen. Im White Theme brauchen wir keine unnötigen Wasser-Dependencies."],
+  ["Brezel", "Beim Formen die Mitte dicker lassen und die Enden dünn ausrollen. So bleibt der Infinite Loop stabil."],
 ];
 
 export const CHRISTOPHUS_TIPS: Array<[string, string]> = [
@@ -134,6 +145,17 @@ export const CHRISTOPHUS_TIPS: Array<[string, string]> = [
   ["Kichererbsen-Salat", "Dependencies geprüft. Kichererbsen, Gemüse und Dressing kompatibel."],
   ["Pasta-Pesto-Salat", "Pesto selbst gebaut. Kein Fertigglas im Dependency Tree gefunden."],
 
+
+  ["Bauernbrot", "Kruste geprüft. Stable Branch erfolgreich gebacken."],
+  ["Laugenbrötchen", "Alle acht Brötchen geprüft. Backend Batch vollständig verarbeitet."],
+  ["Focaccia", "Rosmarin, Olivenöl und Salz geprüft. Olive Commit akzeptiert."],
+  ["Zwiebelbrot", "Zwiebel-Layer geprüft. Architecture ohne Konflikte."],
+  ["Knoblauch-Kräuter-Baguette", "Garlic Patch geprüft. Geschmackstest bestanden."],
+  ["Vollkornbrötchen", "Kerne und Kruste geprüft. Production Build erfolgreich."],
+  ["Ciabatta", "Porung geprüft. Async Fermentation wurde korrekt resolved."],
+  ["Käse-Schinken-Hörnchen", "Füllung geprüft. Wrapped Component bleibt geschlossen."],
+  ["Pizza Bianca", "Mozzarella und Rosmarin geprüft. White Theme läuft stabil."],
+  ["Brezel", "Knoten geprüft. Infinite Loop ohne Endlosschleife."],
 ];
 
 const SAFE_MASTER_FALLBACKS = {
