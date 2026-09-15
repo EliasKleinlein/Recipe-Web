@@ -6,19 +6,19 @@ import Image from "next/image";
 type Person = {
   id: string;
   name: string;
-  portrait: string;
+  portrait?: string;
 };
 
 const people: Person[] = [
   { id: "muju", name: "Muju", portrait: "/images/class/muju.png" },
   { id: "elias", name: "Elias", portrait: "/images/class/optimized/elias-robotik.webp" },
-  { id: "eric", name: "Eric", portrait: "/images/class/optimized/eric-gseai8.webp" },
+  { id: "eric", name: "Eric" },
   { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.png" },
   { id: "christoph", name: "Christopher", portrait: "/images/class/optimized/christoph-matrix.webp" },
   { id: "kevin", name: "Kevin", portrait: "/images/class/optimized/kevin-leetcode.webp" },
   { id: "niko", name: "Niko", portrait: "/images/class/optimized/niko.webp" },
   { id: "marlin", name: "Marlin", portrait: "/images/class/optimized/marlin.webp" },
-  { id: "daniel", name: "Daniel", portrait: "/images/class/optimized/daniel-transparent.webp" },
+  { id: "daniel", name: "Daniel" },
   { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.png" },
 ];
 
@@ -271,13 +271,19 @@ export default function ClassThankYouBook() {
             {person.name}
           </h2>
 
-          <div className="relative mx-auto mt-7 h-[390px] w-[390px] overflow-hidden rounded-full">
-            <Image
-              src={person.portrait}
-              alt={`${person.name} als Bleistiftzeichnung`}
-              fill
-              className="object-contain mix-blend-multiply"
-            />
+          <div className="relative mx-auto mt-7 flex h-[390px] w-[390px] items-center justify-center overflow-hidden rounded-full">
+            {person.portrait ? (
+              <Image
+                src={person.portrait}
+                alt={`${person.name} als Bleistiftzeichnung`}
+                fill
+                className="object-contain mix-blend-multiply"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center border-2 border-[#8d6b4b]/30 bg-[#efe1bd]/40 font-serif text-8xl text-[#6f5339]/70">
+                {person.name.slice(0, 1)}
+              </div>
+            )}
           </div>
 
           <p className="mx-auto mt-9 max-w-sm font-[cursive] text-2xl leading-relaxed">
