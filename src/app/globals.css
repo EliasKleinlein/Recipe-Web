@@ -342,3 +342,82 @@ a[data-master="cannabis"]:hover {
   transform: translateY(-10px) scale(1.015);
   z-index: 20;
 }
+
+/* =========================================================
+   Issue #18 – Visual Polish
+   ========================================================= */
+
+@keyframes fantasy-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fantasy-soft-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes fantasy-shine {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(240%) skewX(-18deg);
+  }
+}
+
+.fantasy-page {
+  animation: fantasy-page-enter 650ms ease-out both;
+}
+
+.hero-float {
+  animation: fantasy-soft-float 5.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.fantasy-shine-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.fantasy-shine-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 28%,
+      rgba(255, 244, 200, 0.14) 43%,
+      rgba(255, 226, 140, 0.28) 50%,
+      rgba(255, 244, 200, 0.12) 57%,
+      transparent 72%
+    );
+  transform: translateX(-140%) skewX(-18deg);
+}
+
+.fantasy-shine-card:hover::after {
+  opacity: 1;
+  animation: fantasy-shine 850ms ease-out 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fantasy-page,
+  .hero-float,
+  .fantasy-shine-card:hover::after {
+    animation: none !important;
+  }
+}

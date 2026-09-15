@@ -20,7 +20,7 @@ function getCategoryLabel(category: RenkeSticker["category"]) {
 export default function StickerCard({ sticker }: StickerCardProps) {
 
   return (
-    <article className="paper-panel renke-card group relative overflow-hidden rounded-[2rem] border border-[#8b5a2b]/45 p-6 text-[#3b2718] shadow-[0_18px_45px_rgba(0,0,0,.28)] transition duration-300 hover:-translate-y-2 hover:rotate-[.3deg] hover:shadow-[0_25px_60px_rgba(218,145,44,.24)]">
+    <article className="paper-panel renke-card fantasy-shine-card group relative overflow-hidden rounded-[2rem] border border-[#8b5a2b]/45 p-6 text-[#3b2718] shadow-[0_18px_45px_rgba(0,0,0,.28)] transition duration-300 hover:-translate-y-2 hover:rotate-[.3deg] hover:shadow-[0_25px_60px_rgba(218,145,44,.24)]">
       <div className="absolute -right-5 -top-5 text-8xl opacity-[.08] transition duration-300 group-hover:rotate-12 group-hover:scale-110">
         {sticker.emoji}
       </div>
