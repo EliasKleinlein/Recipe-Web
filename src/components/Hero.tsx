@@ -56,7 +56,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-[-1%] left-[-15%] z-10 h-[51%] w-[92%] sm:left-[-7%] sm:h-[53%] sm:w-[66%] lg:left-[1%] lg:h-[91%] lg:w-[39%]">
+      <div className="hero-float absolute bottom-[-1%] left-[-15%] z-10 h-[51%] w-[92%] sm:left-[-7%] sm:h-[53%] sm:w-[66%] lg:left-[1%] lg:h-[91%] lg:w-[39%]">
         <Image
           src="/images/renke-chef-transparent.webp"
           alt="Renke als freigestellter gezeichneter Fantasy-Koch mit schwarzer Kochkleidung und Kochlöffel"

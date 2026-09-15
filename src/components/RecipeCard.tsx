@@ -53,7 +53,7 @@ export default function RecipeCard({ id, title, originalTitle, category, duratio
     : title;
 
   return (
-    <Link data-master={master} href={`/recipes/${id}`} className="paper-panel group block overflow-hidden rounded-[1.6rem] border border-[#7d4f25]/60 shadow-[0_18px_45px_rgba(0,0,0,.35)] transition duration-300 hover:-translate-y-2 hover:rotate-[.25deg] hover:shadow-[0_24px_55px_rgba(218,145,44,.2)]">
+    <Link data-master={master} href={`/recipes/${id}`} className="paper-panel fantasy-shine-card group block overflow-hidden rounded-[1.6rem] border border-[#7d4f25]/60 shadow-[0_18px_45px_rgba(0,0,0,.35)] transition duration-300 hover:-translate-y-2 hover:rotate-[.25deg] hover:shadow-[0_24px_55px_rgba(218,145,44,.2)]">
       <div className="relative aspect-[4/3] overflow-hidden border-b border-[#815126]/35 bg-[radial-gradient(circle_at_50%_42%,#d99a3d_0%,#75401f_38%,#17101a_100%)]">
         {image ? (
           <Image src={image} alt={originalTitle} fill sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover saturate-[.82] transition duration-700 group-hover:scale-105" />
