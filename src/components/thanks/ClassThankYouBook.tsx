@@ -170,12 +170,12 @@ export default function ClassThankYouBook() {
       <div className="relative h-full w-full overflow-hidden bg-[#ead8b5]">
         <div className="absolute bottom-0 left-0 top-0 -right-[36px]">
           <Image
-            src="/images/danke-renke-left-page.png"
+            src="/images/thanks/renke-dankesbuch-cover.png"
             alt="Widmungsseite Für Renke"
             fill
             priority
             sizes="50vw"
-            className="object-contain scale-[0.97]"
+            className="object-cover object-center"
           />
         </div>
       </div>
