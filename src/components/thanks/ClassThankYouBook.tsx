@@ -287,6 +287,7 @@ export default function ClassThankYouBook() {
                 src={person.portrait}
                 alt={`${person.name} als Bleistiftzeichnung`}
                 fill
+                sizes="390px"
                 className="object-contain mix-blend-multiply"
               />
             ) : (
