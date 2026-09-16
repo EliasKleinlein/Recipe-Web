@@ -63,7 +63,12 @@ body {
   inset: 0;
   z-index: -2;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 28%, transparent 0 24rem, rgba(1, 5, 10, 0.1) 54rem, rgba(1, 5, 10, 0.38) 100%);
+  background: radial-gradient(
+    circle at 50% 28%,
+    transparent 0 24rem,
+    rgba(1, 5, 10, 0.1) 54rem,
+    rgba(1, 5, 10, 0.38) 100%
+  );
 }
 
 .fantasy-page::after {
@@ -72,7 +77,13 @@ body {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.24), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.24));
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.24),
+    transparent 18%,
+    transparent 82%,
+    rgba(0, 0, 0, 0.24)
+  );
 }
 
 @media (max-width: 767px) {
@@ -85,9 +96,21 @@ body {
 .paper-panel {
   color: var(--ink);
   background:
-    radial-gradient(circle at 14% 12%, rgba(255, 255, 255, 0.62), transparent 24%),
-    radial-gradient(circle at 88% 82%, rgba(113, 68, 28, 0.12), transparent 30%),
-    repeating-linear-gradient(0deg, rgba(85, 48, 22, 0.025) 0 1px, transparent 1px 4px),
+    radial-gradient(
+      circle at 14% 12%,
+      rgba(255, 255, 255, 0.62),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 88% 82%,
+      rgba(113, 68, 28, 0.12),
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(85, 48, 22, 0.025) 0 1px,
+      transparent 1px 4px
+    ),
     linear-gradient(135deg, var(--parchment-light), var(--parchment));
   box-shadow:
     inset 0 0 36px rgba(91, 49, 17, 0.18),
@@ -123,8 +146,15 @@ body {
 }
 
 @keyframes ember-float {
-  0%, 100% { transform: translateY(0) rotate(0); opacity: 0.38; }
-  50% { transform: translateY(-12px) rotate(12deg); opacity: 0.92; }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translateY(-12px) rotate(12deg);
+    opacity: 0.92;
+  }
 }
 
 .ember {
@@ -132,8 +162,12 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -157,19 +191,47 @@ body {
   pointer-events: none;
   border-radius: 1.8rem;
   opacity: 0;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255, 236, 167, 0.42) 0%,
-      rgba(255, 198, 73, 0.28) 35%,
-      rgba(194, 121, 27, 0.14) 58%,
-      transparent 76%
-    );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 236, 167, 0.42) 0%,
+    rgba(255, 198, 73, 0.28) 35%,
+    rgba(194, 121, 27, 0.14) 58%,
+    transparent 76%
+  );
   filter: blur(15px);
   transform: scale(0.96);
   transition:
     opacity 450ms ease,
     transform 500ms ease;
+}
+
+/* RENKE – NEON ROT */
+#kuechenmeister .grid > button[data-master="renke"]:hover {
+  filter: brightness(1.07) saturate(1.08)
+    drop-shadow(0 0 5px rgba(255, 48, 48, 0.95))
+    drop-shadow(0 0 15px rgba(255, 48, 48, 0.8))
+    drop-shadow(0 0 32px rgba(255, 20, 20, 0.6));
+}
+/* WALTER – NEON GOLD */
+#kuechenmeister .grid > button[data-master="walter"]:hover {
+  filter: brightness(1.07) saturate(1.08)
+    drop-shadow(0 0 5px rgba(255, 212, 92, 0.95))
+    drop-shadow(0 0 15px rgba(255, 190, 55, 0.8))
+    drop-shadow(0 0 32px rgba(255, 170, 20, 0.6));
+}
+/* MALTE – NEON PINK */
+#kuechenmeister .grid > button[data-master="malte"]:hover {
+  filter: brightness(1.07) saturate(1.08)
+    drop-shadow(0 0 5px rgba(255, 70, 215, 0.95))
+    drop-shadow(0 0 15px rgba(255, 45, 190, 0.8))
+    drop-shadow(0 0 32px rgba(255, 20, 165, 0.6));
+}
+/* MEISTER BRIXEL – NEON GRÜN */
+#kuechenmeister .grid > button[data-master="brixel"]:hover {
+  filter: brightness(1.07) saturate(1.08)
+    drop-shadow(0 0 5px rgba(57, 255, 20, 0.95))
+    drop-shadow(0 0 15px rgba(57, 255, 20, 0.8))
+    drop-shadow(0 0 32px rgba(30, 255, 60, 0.6));
 }
 
 /* Zauberstaub rund um die Karte */
@@ -211,8 +273,7 @@ body {
     94% 27%,
     7% 52%;
 
-  filter:
-    drop-shadow(0 0 3px rgba(255, 244, 190, 1))
+  filter: drop-shadow(0 0 3px rgba(255, 244, 190, 1))
     drop-shadow(0 0 7px rgba(255, 194, 59, 0.9));
 
   transform: translateY(8px) scale(0.96);
@@ -220,9 +281,7 @@ body {
 
 /* Hover */
 #kuechenmeister .grid > button:hover {
-  filter:
-    brightness(1.07)
-    saturate(1.08)
+  filter: brightness(1.07) saturate(1.08)
     drop-shadow(0 0 5px rgba(255, 239, 177, 0.9))
     drop-shadow(0 0 15px rgba(255, 197, 69, 0.7))
     drop-shadow(0 0 32px rgba(201, 126, 27, 0.48));
@@ -268,8 +327,6 @@ body {
     transform: translateY(-27px) scale(0.97);
   }
 }
-
-
 
 /* =========================================================
    Rezeptkarten – Küchenmeister Neon Hover
@@ -335,7 +392,7 @@ a[data-master="cannabis"]:hover {
   box-shadow:
     0 0 5px #39ff14,
     0 0 14px rgba(57, 255, 20, 0.95),
-    0 0 32px rgba(57, 255, 20, 0.80),
+    0 0 32px rgba(57, 255, 20, 0.8),
     0 0 65px rgba(30, 255, 60, 0.58),
     0 24px 60px rgba(0, 0, 0, 0.55) !important;
   filter: saturate(1.12);
@@ -359,7 +416,8 @@ a[data-master="cannabis"]:hover {
 }
 
 @keyframes fantasy-soft-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -397,15 +455,14 @@ a[data-master="cannabis"]:hover {
   z-index: 20;
   pointer-events: none;
   opacity: 0;
-  background:
-    linear-gradient(
-      105deg,
-      transparent 28%,
-      rgba(255, 244, 200, 0.14) 43%,
-      rgba(255, 226, 140, 0.28) 50%,
-      rgba(255, 244, 200, 0.12) 57%,
-      transparent 72%
-    );
+  background: linear-gradient(
+    105deg,
+    transparent 28%,
+    rgba(255, 244, 200, 0.14) 43%,
+    rgba(255, 226, 140, 0.28) 50%,
+    rgba(255, 244, 200, 0.12) 57%,
+    transparent 72%
+  );
   transform: translateX(-140%) skewX(-18deg);
 }
 
