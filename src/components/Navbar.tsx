@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 px-1 pb-4 pt-5 sm:px-2 sm:pb-6 sm:pt-8">
+    <header className="sticky top-0 z-50 px-1 pb-4 pt-5 sm:px-2 sm:pb-6 sm:pt-8 xl:-mb-48 2xl:-mb-[225px]">
       <nav
         aria-label="Hauptnavigation"
-        className="relative mx-auto flex aspect-[1774/887] w-full max-w-[1500px] items-center justify-center gap-3 px-3 py-2 text-[#3b2514] sm:justify-between sm:px-6 sm:py-3 lg:px-10"
+        className="relative mx-auto flex aspect-[1774/887] w-full max-w-[1500px] items-center justify-center gap-3 px-3 py-2 text-[#3b2514] sm:justify-between sm:px-6 sm:py-3 lg:px-10 xl:[clip-path:inset(0_0_10%_0)]"
         style={{
           marginTop: "calc(-1 * clamp(2.75rem, 13vw, 10.25rem))",
           backgroundImage: "url('/images/header-renkes-kochbuch.png')",
