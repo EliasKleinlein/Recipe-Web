@@ -17,7 +17,8 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          className="fantasy-shine-card group absolute left-1/2 top-[calc(31%+4px)] z-10 aspect-[1978/653] w-[45%] origin-[81%_18%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[40%] transition-transform duration-500 ease-out hover:-rotate-[4deg]"
+          className="group absolute left-1/2 top-[calc(31%+12px)] z-10 aspect-[1978/653] w-[45%] origin-[81%_18%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[40%] transition-transform duration-500 ease-out hover:-rotate-[4deg]"
+          style={{ position: "relative" }}
           aria-label="Renkes Kochbuch – Startseite"
         >
           <Image
@@ -32,7 +33,7 @@ export default function Navbar() {
         <Link
           href="/stickers"
           aria-label="Sticker"
-          className="fantasy-shine-card group absolute right-[3%] top-[calc(36%+12px)] z-20 aspect-[1122/1378] w-[22%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[17%] lg:w-[15%]"
+          className="group absolute right-[3%] top-[calc(36%+12px)] z-20 aspect-[1122/1378] w-[22%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[17%] lg:w-[15%]"
           style={{ position: "absolute" }}
         >
           <Image
@@ -47,7 +48,7 @@ export default function Navbar() {
         <Link
           href="/#rezepte"
           aria-label="Rezepte"
-          className="fantasy-shine-card group absolute right-[3%] top-[calc(55%+60px)] z-[19] aspect-[1099/906] w-[22%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[17%] lg:w-[15%]"
+          className="group absolute right-[3%] top-[calc(55%+60px)] z-[19] aspect-[1099/906] w-[22%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[17%] lg:w-[15%]"
           style={{ position: "absolute" }}
         >
           <Image
@@ -62,7 +63,7 @@ export default function Navbar() {
         <Link
           href="/chinesische-rezepte"
           aria-label="Chinesische Rezepte"
-          className="fantasy-shine-card group absolute left-[calc(3%-16px)] top-[calc(36%+24px)] z-20 aspect-[1120/819] w-[27%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[21%] lg:w-[18%]"
+          className="group absolute left-[calc(3%-16px)] top-[calc(36%+24px)] z-20 aspect-[1120/819] w-[27%] origin-[82%_5%] overflow-hidden rounded-[15%] transition-transform duration-500 ease-out hover:-rotate-[4deg] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7c451e] sm:w-[21%] lg:w-[18%]"
           style={{ position: "absolute" }}
         >
           <Image
