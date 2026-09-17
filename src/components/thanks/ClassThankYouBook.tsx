@@ -12,20 +12,20 @@ type Person = {
 const people: Person[] = [
   { id: "muju", name: "Muju", portrait: "/images/class/muju.webp" },
   { id: "elias", name: "Elias", portrait: "/images/class/optimized/elias-robotik.webp" },
-  { id: "eric", name: "Eric" },
-  { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.webp" },
+  { id: "eric", name: "Eric", portrait: "/images/class/eric.png" },
+  { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.png" },
   { id: "christoph", name: "Christopher", portrait: "/images/class/optimized/christoph-matrix.webp" },
   { id: "kevin", name: "Kevin", portrait: "/images/class/optimized/kevin-leetcode.webp" },
   { id: "niko", name: "Niko", portrait: "/images/class/optimized/niko.webp" },
   { id: "marlin", name: "Marlin", portrait: "/images/class/optimized/marlin.webp" },
-  { id: "daniel", name: "Daniel" },
-  { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.webp" },
+  { id: "daniel", name: "Daniel", portrait: "/images/class/daniel.png" },
+  { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.png" },
 ];
 
 const names = people.map((person) => person.name).join(" · ");
 
 
-const MESSAGE_PAGE_LIMIT = 320;
+const MESSAGE_PAGE_LIMIT = 520;
 
 const EMPTY_MESSAGE = "Noch kein persönlicher Eintrag vorhanden. ❤️";
 
@@ -333,7 +333,7 @@ export default function ClassThankYouBook() {
 
           <div className="my-7 h-px w-40 bg-[#856044]/35" />
 
-          <div className="handwriting min-h-0 flex-1 w-full whitespace-pre-wrap overflow-hidden rounded-xl border border-[#8a674d]/20 bg-[#f6e8ca]/35 p-5 text-[26px] leading-[1.65]">
+          <div className="handwriting min-h-0 flex-1 w-full whitespace-pre-wrap overflow-hidden rounded-xl border border-[#8a674d]/20 bg-[#f6e8ca]/35 p-5 text-[23px] leading-[1.55]">
             {personPages[safeTextPage]}
           </div>
 
