@@ -459,7 +459,7 @@ Bis zum Servieren kalt stellen.`,
     category: 'Fisch',
     duration: 35,
     servings: 4,
-    image: '/images/recipes/lachs-stream-buffer.png',
+    image: '/images/recipes/lachs-stream-buffer.webp',
     ingredients: `4 Lachsfilets
 1 Bio-Zitrone
 2 Knoblauchzehen
@@ -487,7 +487,7 @@ Vor dem Servieren kurz ruhen lassen.`,
     category: 'Fisch',
     duration: 40,
     servings: 4,
-    image: '/images/recipes/kabeljau-clean-code-kruste.png',
+    image: '/images/recipes/kabeljau-clean-code-kruste.webp',
     ingredients: `4 Kabeljaufilets
 80 g Semmelbrösel
 30 g Parmesan
@@ -514,7 +514,7 @@ Sofort servieren.`,
     category: 'Fisch & Meeresfrüchte',
     duration: 25,
     servings: 4,
-    image: '/images/recipes/garnelenpfanne-hotfix.png',
+    image: '/images/recipes/garnelenpfanne-hotfix.webp',
     ingredients: `500 g Garnelen
 3 Knoblauchzehen
 2 EL Olivenöl
@@ -541,7 +541,7 @@ Mit Petersilie bestreuen und sofort servieren.`,
     category: 'Vegetarisch',
     duration: 45,
     servings: 4,
-    image: '/images/recipes/pilzrisotto-async-await.png',
+    image: '/images/recipes/pilzrisotto-async-await.webp',
     ingredients: `320 g Risottoreis
 400 g Champignons
 1 Zwiebel
@@ -572,7 +572,7 @@ Mit Thymian, Salz und Pfeffer abschmecken.`,
     category: 'Vegetarisch',
     duration: 80,
     servings: 6,
-    image: '/images/recipes/gemuese-lasagne-green-merge.png',
+    image: '/images/recipes/gemuese-lasagne-green-merge.webp',
     ingredients: `12 Lasagneplatten
 1 Zucchini
 1 Aubergine
@@ -604,7 +604,7 @@ Vor dem Anschneiden einige Minuten ruhen lassen.`,
     category: 'Vegetarisch',
     duration: 40,
     servings: 4,
-    image: '/images/recipes/kichererbsen-curry-open-source.png',
+    image: '/images/recipes/kichererbsen-curry-open-source.webp',
     ingredients: `2 Dosen Kichererbsen
 1 Zwiebel
 2 Knoblauchzehen
@@ -635,7 +635,7 @@ Nach Wunsch mit frischem Koriander servieren.`,
     category: 'Brot & Backstube',
     duration: 160,
     servings: 10,
-    image: '/images/recipes/bauernbrot-long-term-support.png',
+    image: '/images/recipes/bauernbrot-long-term-support.webp',
     ingredients: `350 g Weizenmehl
 250 g Roggenmehl
 1 Päckchen Trockenhefe
@@ -663,7 +663,7 @@ Temperatur auf 200 °C reduzieren und weitere 35 bis 40 Minuten backen.`,
     category: 'Brot & Backstube',
     duration: 30,
     servings: 6,
-    image: '/images/recipes/knoblauchbrot-pull-request.png',
+    image: '/images/recipes/knoblauchbrot-pull-request.webp',
     ingredients: `1 großes Baguette
 100 g weiche Butter
 3 Knoblauchzehen
@@ -690,7 +690,7 @@ Anschließend öffnen und weitere 5 Minuten knusprig backen.`,
     category: 'Kuchen & Torten',
     duration: 70,
     servings: 12,
-    image: '/images/recipes/zitronenkuchen-fresh-release.png',
+    image: '/images/recipes/zitronenkuchen-fresh-release.webp',
     ingredients: `250 g Butter
 220 g Zucker
 4 Eier
@@ -719,7 +719,7 @@ Den abgekühlten Kuchen mit Zitronenguss überziehen.`,
     category: 'Dessert',
     duration: 40,
     servings: 8,
-    image: '/images/recipes/tiramisu-layer-stack.png',
+    image: '/images/recipes/tiramisu-layer-stack.webp',
     ingredients: `500 g Mascarpone
 250 g Löffelbiskuits
 4 Eier

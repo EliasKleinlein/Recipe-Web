@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 px-1 pb-4 pt-5 sm:px-2 sm:pb-6 sm:pt-8">
+    <header className="sticky top-0 z-50 px-1 pb-4 pt-5 sm:px-2 sm:pb-6 sm:pt-8 xl:-mb-48 2xl:-mb-[225px]">
       <nav
         aria-label="Hauptnavigation"
-        className="relative mx-auto flex aspect-[1774/887] w-full max-w-[1500px] items-center justify-center gap-3 px-3 py-2 text-[#3b2514] sm:justify-between sm:px-6 sm:py-3 lg:px-10"
+        className="relative mx-auto flex aspect-[1774/887] w-full max-w-[1500px] items-center justify-center gap-3 px-3 py-2 text-[#3b2514] sm:justify-between sm:px-6 sm:py-3 lg:px-10 xl:[clip-path:inset(0_0_10%_0)]"
         style={{
           marginTop: "calc(-1 * clamp(2.75rem, 13vw, 10.25rem))",
-          backgroundImage: "url('/images/header-renkes-kochbuch.png')",
+          backgroundImage: "url('/images/header-renkes-kochbuch.webp')",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
@@ -21,7 +21,7 @@ export default function Navbar() {
           aria-label="Renkes Kochbuch – Startseite"
         >
           <Image
-            src="/images/header-home-sign.png"
+            src="/images/header-home-sign.webp"
             alt=""
             fill
             sizes="(max-width: 1500px) 45vw, 675px"
@@ -36,7 +36,7 @@ export default function Navbar() {
           style={{ position: "absolute" }}
         >
           <Image
-            src="/images/storytime-sticker-button.png"
+            src="/images/storytime-sticker-button.webp"
             alt=""
             fill
             sizes="(max-width: 640px) 22vw, (max-width: 1024px) 17vw, 15vw"
@@ -51,7 +51,7 @@ export default function Navbar() {
           style={{ position: "absolute" }}
         >
           <Image
-            src="/images/recipes-hanging-button.png"
+            src="/images/recipes-hanging-button.webp"
             alt=""
             fill
             sizes="(max-width: 640px) 22vw, (max-width: 1024px) 17vw, 15vw"
@@ -66,7 +66,7 @@ export default function Navbar() {
           style={{ position: "absolute" }}
         >
           <Image
-            src="/images/chinese-recipes-button.png"
+            src="/images/chinese-recipes-button.webp"
             alt=""
             fill
             sizes="(max-width: 640px) 27vw, (max-width: 1024px) 21vw, 18vw"
