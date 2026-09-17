@@ -1,0 +1,605 @@
+[
+  {
+    "id": 1,
+    "title": "Schweinefleisch mit Mu-Err-Pilzen",
+    "originalTitle": "木耳肉片",
+    "image": "/images/chinese-recipes/01-schweinefleisch-mit-mu-err-pilzen.png",
+    "ingredients": [
+      "400 g Schweinefilet oder Schweinerücken",
+      "25 g getrocknete Mu-Err-Pilze",
+      "4 Frühlingszwiebeln",
+      "2 Knoblauchzehen",
+      "15 g Ingwer",
+      "2 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "1,5 TL Speisestärke",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Mu-Err-Pilze in warmem Wasser einweichen, reinigen und in mundgerechte Stücke schneiden.",
+      "Schweinefleisch dünn schneiden und mit 1 EL Sojasauce, Reiswein und Stärke marinieren.",
+      "Frühlingszwiebeln in größere Stücke schneiden. Knoblauch und Ingwer fein schneiden.",
+      "Öl im Wok stark erhitzen und Fleisch kräftig anbraten. Herausnehmen.",
+      "Ingwer, Knoblauch und Mu-Err kurz braten.",
+      "Fleisch und Frühlingszwiebeln zurückgeben.",
+      "Mit restlicher Sojasauce und Zucker würzen, kräftig durchschwenken und servieren."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Schweinefleisch mit Gurke",
+    "originalTitle": "黄瓜肉片",
+    "image": "/images/chinese-recipes/02-schweinefleisch-mit-gurke.png",
+    "ingredients": [
+      "400 g Schweinefilet oder Schweinerücken",
+      "1 große Salatgurke",
+      "4 Frühlingszwiebeln",
+      "2 Knoblauchzehen",
+      "15 g Ingwer",
+      "2 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Speisestärke",
+      "1 TL Zucker",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Schweinefleisch dünn schneiden und mit 1 EL Sojasauce, Reiswein und Stärke marinieren.",
+      "Gurke schräg in dickere Scheiben schneiden.",
+      "Frühlingszwiebeln schneiden, Knoblauch und Ingwer fein hacken.",
+      "Fleisch in sehr heißem Öl kurz kräftig anbraten und herausnehmen.",
+      "Knoblauch, Ingwer und Frühlingszwiebeln kurz braten.",
+      "Gurke hinzugeben und nur 1–2 Minuten braten.",
+      "Fleisch zurückgeben, mit Sojasauce und Zucker abschmecken und sofort servieren."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Trocken gebratene Bittermelone",
+    "originalTitle": "干煸苦瓜",
+    "image": "/images/chinese-recipes/03-trocken-gebratene-bittermelone.png",
+    "ingredients": [
+      "2 Bittermelonen, ca. 450–500 g",
+      "150 g Schweinehackfleisch",
+      "4 getrocknete rote Chilischoten",
+      "1 frische rote Chili",
+      "3 Knoblauchzehen",
+      "1 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Bittermelonen längs halbieren, Kerne und weißes Inneres entfernen und in Halbmonde schneiden.",
+      "Leicht salzen, etwa 10 Minuten ziehen lassen und trocken tupfen.",
+      "Bittermelone im sehr heißen Wok nahezu ohne Öl trocken anrösten. Herausnehmen.",
+      "Öl zugeben und Hackfleisch kräftig krümelig braten.",
+      "Knoblauch sowie frische und getrocknete Chili hinzufügen.",
+      "Bittermelone zurückgeben.",
+      "Sojasauce, Reiswein und Zucker hinzufügen.",
+      "Weiterbraten, bis das Gericht trocken, glänzend und kräftig gewürzt ist."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Süß-sauer geschmorter Chinakohl",
+    "originalTitle": "醋熘白菜",
+    "image": "/images/chinese-recipes/04-suess-sauer-geschmorter-chinakohl.png",
+    "ingredients": [
+      "700 g Chinakohl",
+      "1 große Karotte",
+      "2 Knoblauchzehen",
+      "2 EL Reisessig",
+      "1 EL helle Sojasauce",
+      "1,5 EL Zucker",
+      "1 TL Speisestärke",
+      "75 ml Wasser oder Gemüsebrühe",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Chinakohl in größere Stücke und Karotte schräg in dünne Scheiben schneiden.",
+      "Knoblauch fein hacken.",
+      "Essig, Sojasauce, Zucker, Stärke und Wasser zu einer Sauce verrühren.",
+      "Öl stark erhitzen und Knoblauch kurz anbraten.",
+      "Karotte und anschließend Chinakohl kräftig rührbraten.",
+      "Sauce angießen.",
+      "Kurz schmoren, bis der Kohl weich, aber noch leicht bissfest ist."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mapo Tofu",
+    "originalTitle": "麻婆豆腐",
+    "image": "/images/chinese-recipes/05-mapo-tofu.png",
+    "ingredients": [
+      "450 g weicher bis mittelfester Tofu",
+      "180 g Schweinehackfleisch",
+      "2 EL Doubanjiang",
+      "1 EL fermentierte schwarze Bohnen",
+      "2 Knoblauchzehen",
+      "15 g Ingwer",
+      "3 Frühlingszwiebeln",
+      "250 ml Hühner- oder Gemüsebrühe",
+      "1 EL helle Sojasauce",
+      "1 TL Zucker",
+      "1 TL Speisestärke",
+      "1–2 TL gemahlener Sichuanpfeffer",
+      "2 EL neutrales Öl"
+    ],
+    "preparation": [
+      "Tofu in etwa 2 cm große Würfel schneiden.",
+      "Hackfleisch im heißen Öl kräftig anbraten.",
+      "Doubanjiang, schwarze Bohnen, Knoblauch und Ingwer hinzufügen und rösten.",
+      "Brühe, Sojasauce und Zucker einrühren.",
+      "Tofu vorsichtig hineingeben und einige Minuten köcheln lassen.",
+      "Stärke mit etwas Wasser verrühren und Sauce leicht binden.",
+      "Mit Frühlingszwiebeln und Sichuanpfeffer bestreuen."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Trocken gebratene grüne Bohnen",
+    "originalTitle": "干煸四季豆",
+    "image": "/images/chinese-recipes/06-trocken-gebratene-gruene-bohnen.png",
+    "ingredients": [
+      "500 g grüne Bohnen",
+      "150 g Schweinehackfleisch",
+      "6 getrocknete rote Chilischoten",
+      "3 Knoblauchzehen",
+      "1 TL Sichuanpfeffer",
+      "1 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "3 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Bohnen putzen, waschen und sehr gut trocknen.",
+      "Bohnen in heißem Öl kräftig braten, bis die Haut Blasen wirft und leicht schrumpelig wird. Herausnehmen.",
+      "Hackfleisch im verbliebenen Öl krümelig braten.",
+      "Knoblauch, Chili und Sichuanpfeffer hinzufügen.",
+      "Bohnen zurückgeben.",
+      "Sojasauce, Reiswein und Zucker hinzufügen.",
+      "Alles kräftig trocken braten, bis kaum Flüssigkeit übrig ist."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Fisch mit eingelegtem Gemüse",
+    "originalTitle": "泡菜鱼",
+    "image": "/images/chinese-recipes/07-fisch-mit-eingelegtem-gemuese.png",
+    "ingredients": [
+      "600 g festes weißes Fischfilet",
+      "250 g eingelegtes Senfgemüse oder Suancai",
+      "700 ml Fisch- oder Hühnerbrühe",
+      "5 getrocknete rote Chilischoten",
+      "1 frische rote Chili",
+      "1 TL Sichuanpfeffer",
+      "20 g Ingwer",
+      "3 Knoblauchzehen",
+      "3 Frühlingszwiebeln",
+      "1 kleiner Bund Koriander",
+      "1 EL Shaoxing-Reiswein",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch in große Stücke schneiden und mit Salz und Reiswein würzen.",
+      "Eingelegtes Gemüse grob schneiden.",
+      "Ingwer, Knoblauch, Chili und Frühlingszwiebeln vorbereiten.",
+      "Ingwer, Knoblauch, Chili und Sichuanpfeffer in Öl anrösten.",
+      "Eingelegtes Gemüse hinzufügen und kurz braten.",
+      "Brühe angießen und aufkochen.",
+      "Fisch vorsichtig einlegen und gar ziehen lassen.",
+      "Mit Frühlingszwiebeln, Chili und reichlich Koriander servieren."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Eichhörnchen-Fisch",
+    "originalTitle": "松鼠鱼",
+    "image": "/images/chinese-recipes/08-eichhoernchen-fisch.png",
+    "ingredients": [
+      "1 ganzer küchenfertiger Fisch, ca. 900 g",
+      "100 g Speisestärke",
+      "Öl zum Frittieren",
+      "150 g Ananasstücke",
+      "1/2 rote Paprika",
+      "1/2 grüne Paprika",
+      "2 Knoblauchzehen",
+      "2 Frühlingszwiebeln",
+      "4 EL Tomatenketchup oder dicke Tomatensauce",
+      "3 EL Reisessig",
+      "3 EL Zucker",
+      "1 EL helle Sojasauce",
+      "150 ml Wasser",
+      "1 TL Speisestärke für die Sauce",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch öffnen und die großen Gräten vorsichtig entfernen, ohne die Haut zu beschädigen.",
+      "Fischfleisch tief kreuzweise einschneiden.",
+      "Leicht salzen und vollständig mit Stärke bestäuben.",
+      "In heißem Öl goldbraun und knusprig frittieren.",
+      "Paprika und Ananas klein schneiden.",
+      "Knoblauch anbraten und Tomatensauce, Essig, Zucker, Sojasauce und Wasser hinzufügen.",
+      "Paprika und Ananas kurz darin garen.",
+      "Sauce leicht mit Stärke binden.",
+      "Sauce über den knusprigen Fisch geben und mit Frühlingszwiebeln servieren."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Scharfer Chili-Fisch",
+    "originalTitle": "辣子鱼",
+    "image": "/images/chinese-recipes/09-scharfer-chili-fisch.png",
+    "ingredients": [
+      "700 g festes Fischfilet",
+      "12 getrocknete rote Chilischoten",
+      "1 EL Sichuanpfeffer",
+      "4 Knoblauchzehen",
+      "20 g Ingwer",
+      "4 Frühlingszwiebeln",
+      "1 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "1 EL Speisestärke",
+      "3 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch in große mundgerechte Stücke schneiden.",
+      "Mit Sojasauce, Reiswein, Stärke und etwas Salz marinieren.",
+      "Fisch in heißem Öl kräftig anbraten und herausnehmen.",
+      "Getrocknete Chilischoten grob schneiden.",
+      "Knoblauch, Ingwer, Chili und Sichuanpfeffer aromatisch rösten.",
+      "Fisch zurückgeben.",
+      "Zucker und Frühlingszwiebeln hinzufügen.",
+      "Alles kräftig durchschwenken."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Seegurke nach Hausfrauenart",
+    "originalTitle": "家常海参",
+    "image": "/images/chinese-recipes/10-seegurke-nach-hausfrauenart.png",
+    "ingredients": [
+      "500 g küchenfertige eingeweichte Seegurke",
+      "6 Shiitake",
+      "250 g Pak Choi",
+      "1 Karotte",
+      "3 Frühlingszwiebeln",
+      "15 g Ingwer",
+      "2 Knoblauchzehen",
+      "300 ml Hühnerbrühe",
+      "2 EL helle Sojasauce",
+      "1 EL Austernsauce",
+      "1 TL Zucker",
+      "1 TL Speisestärke",
+      "2 EL neutrales Öl"
+    ],
+    "preparation": [
+      "Seegurke in große Stücke schneiden und kurz blanchieren.",
+      "Shiitake, Karotte und Pak Choi vorbereiten.",
+      "Ingwer und Knoblauch in Öl kurz anbraten.",
+      "Shiitake und Karotte hinzufügen.",
+      "Seegurke zugeben.",
+      "Brühe, Sojasauce, Austernsauce und Zucker einrühren.",
+      "Bei mittlerer Hitze schmoren.",
+      "Pak Choi und Frühlingszwiebeln hinzufügen.",
+      "Sauce leicht mit Stärke binden."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Rot geschmorter Silberkarpfen",
+    "originalTitle": "红烧鲢鱼",
+    "image": "/images/chinese-recipes/11-rot-geschmorter-silberkarpfen.png",
+    "ingredients": [
+      "1 küchenfertiger Silberkarpfen, ca. 900 g",
+      "4 Frühlingszwiebeln",
+      "25 g Ingwer",
+      "4 Knoblauchzehen",
+      "2 Sternanis",
+      "4 getrocknete rote Chilischoten",
+      "3 EL helle Sojasauce",
+      "1 EL dunkle Sojasauce",
+      "2 EL Shaoxing-Reiswein",
+      "1 EL brauner Zucker oder Kandiszucker",
+      "400 ml Brühe",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch trocken tupfen und auf beiden Seiten einschneiden.",
+      "In Öl von beiden Seiten kräftig anbraten.",
+      "Ingwer, Knoblauch, Chili und Sternanis hinzufügen.",
+      "Sojasaucen, Reiswein und Zucker zugeben.",
+      "Brühe angießen.",
+      "Fisch bei kleiner bis mittlerer Hitze schmoren und regelmäßig mit Sauce übergießen.",
+      "Frühlingszwiebeln hinzufügen.",
+      "Sauce kräftig einkochen lassen, bis sie dunkel und glänzend ist."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Fischkopf im Tontopf",
+    "originalTitle": "砂锅鱼头",
+    "image": "/images/chinese-recipes/12-fischkopf-im-tontopf.png",
+    "ingredients": [
+      "1 großer Fischkopf, ca. 900–1.000 g",
+      "300 g Tofu",
+      "250 g Chinakohl",
+      "6 Shiitake",
+      "3 Frühlingszwiebeln",
+      "25 g Ingwer",
+      "3 Knoblauchzehen",
+      "2 getrocknete rote Chilischoten",
+      "1 EL Shaoxing-Reiswein",
+      "1,2 l Fisch- oder Hühnerbrühe",
+      "1 EL helle Sojasauce",
+      "1/2 TL weißer Pfeffer",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fischkopf gründlich reinigen und kräftig anbraten.",
+      "Ingwer, Knoblauch und Chili hinzufügen.",
+      "Mit Reiswein ablöschen.",
+      "Brühe angießen und alles in einen Tontopf geben.",
+      "Shiitake und Chinakohl hinzufügen und etwa 15 Minuten köcheln.",
+      "Tofu in große Würfel schneiden und vorsichtig einlegen.",
+      "Weitere 8–10 Minuten leise garen.",
+      "Mit Sojasauce, Pfeffer und Salz abschmecken.",
+      "Frühlingszwiebeln darübergeben und direkt im Tontopf servieren."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Jade-Garnelen",
+    "originalTitle": "翡翠虾仁",
+    "image": "/images/chinese-recipes/13-jade-garnelen.png",
+    "ingredients": [
+      "450 g geschälte Garnelen",
+      "1 kleine Salatgurke",
+      "150 g Zuckerschoten",
+      "250 g Pak Choi",
+      "3 Knoblauchzehen",
+      "10 g Ingwer",
+      "2 Frühlingszwiebeln",
+      "150 ml Hühnerbrühe",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Speisestärke",
+      "1 TL Zucker",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Garnelen trocken tupfen und leicht salzen.",
+      "Gurke schräg schneiden, Pak Choi teilen und Zuckerschoten putzen.",
+      "Garnelen im heißen Wok kurz anbraten und herausnehmen.",
+      "Knoblauch und Ingwer kurz anrösten.",
+      "Pak Choi, Zuckerschoten und Gurke kräftig rührbraten.",
+      "Brühe, Reiswein und Zucker hinzufügen.",
+      "Garnelen zurückgeben.",
+      "Sauce mit wenig Stärke leicht binden.",
+      "Frühlingszwiebeln darübergeben."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Fünf-Gewürze-Aal",
+    "originalTitle": "五香鳝片",
+    "image": "/images/chinese-recipes/14-fuenf-gewuerze-aal.png",
+    "ingredients": [
+      "600 g küchenfertiger Aal",
+      "2 Sternanis",
+      "1 kleine Zimtstange",
+      "1,5 TL chinesisches Fünf-Gewürze-Pulver",
+      "20 g Ingwer",
+      "3 Knoblauchzehen",
+      "3 Frühlingszwiebeln",
+      "2 EL helle Sojasauce",
+      "1 EL dunkle Sojasauce",
+      "2 EL Shaoxing-Reiswein",
+      "1 EL brauner Zucker",
+      "300 ml Brühe",
+      "2 EL neutrales Öl"
+    ],
+    "preparation": [
+      "Aal in große Stücke schneiden.",
+      "In heißem Öl kräftig anbraten.",
+      "Ingwer, Knoblauch, Sternanis und Zimt hinzufügen.",
+      "Sojasaucen, Reiswein, Zucker und Fünf-Gewürze-Pulver einrühren.",
+      "Brühe angießen.",
+      "Bei kleiner Hitze schmoren, bis der Aal zart ist.",
+      "Frühlingszwiebeln hinzufügen.",
+      "Sauce stark einkochen lassen, bis sie dick und glänzend am Aal haftet."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Aalstreifen mit grünem Paprika",
+    "originalTitle": "青椒鳝丝",
+    "image": "/images/chinese-recipes/15-aalstreifen-mit-gruenem-paprika.png",
+    "ingredients": [
+      "500 g Aalfilet",
+      "2 große grüne Paprika",
+      "3 Knoblauchzehen",
+      "15 g Ingwer",
+      "3 Frühlingszwiebeln",
+      "2 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "1 TL Speisestärke",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Aal in längliche dünne Streifen schneiden.",
+      "Mit Sojasauce, Reiswein und Stärke marinieren.",
+      "Paprika in lange Streifen schneiden.",
+      "Aal im sehr heißen Wok kurz kräftig anbraten und herausnehmen.",
+      "Ingwer, Knoblauch und Paprika rührbraten.",
+      "Aal zurückgeben.",
+      "Mit Zucker und etwas Sojasauce abschmecken.",
+      "Frühlingszwiebeln unterheben und sofort servieren."
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Knusprig gebratene Garnelen",
+    "originalTitle": "生爆虾仁",
+    "image": "/images/chinese-recipes/16-knusprig-gebratene-garnelen.png",
+    "ingredients": [
+      "500 g große geschälte Garnelen",
+      "2 EL Speisestärke",
+      "5 Knoblauchzehen",
+      "4 Frühlingszwiebeln",
+      "1 EL Shaoxing-Reiswein",
+      "1 EL helle Sojasauce",
+      "1/2 TL weißer Pfeffer",
+      "3 EL neutrales Öl",
+      "1 TL Sesamöl",
+      "Salz"
+    ],
+    "preparation": [
+      "Garnelen gründlich trocken tupfen.",
+      "Mit Reiswein, Salz und weißem Pfeffer würzen.",
+      "Leicht mit Stärke überziehen.",
+      "Öl sehr stark erhitzen.",
+      "Garnelen portionsweise goldbraun und leicht knusprig braten.",
+      "Herausnehmen und Knoblauch kurz rösten.",
+      "Garnelen und Frühlingszwiebeln zurückgeben.",
+      "Sojasauce und Sesamöl hinzufügen und kurz durchschwenken."
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Garnelen mit Tomate",
+    "originalTitle": "番茄虾仁",
+    "image": "/images/chinese-recipes/17-garnelen-mit-tomate.png",
+    "ingredients": [
+      "500 g geschälte Garnelen",
+      "500 g reife Tomaten",
+      "3 Frühlingszwiebeln",
+      "2 Knoblauchzehen",
+      "1 EL Tomatenmark",
+      "1 EL Reisessig",
+      "1 EL Zucker",
+      "1 EL helle Sojasauce",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Speisestärke",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Tomaten grob würfeln.",
+      "Garnelen kurz in heißem Öl anbraten und herausnehmen.",
+      "Knoblauch und den weißen Teil der Frühlingszwiebeln anrösten.",
+      "Tomatenmark und Tomaten hinzufügen.",
+      "Essig, Zucker, Sojasauce und Reiswein einrühren.",
+      "Sauce einige Minuten einkochen lassen.",
+      "Garnelen zurückgeben und nur kurz fertig garen.",
+      "Falls nötig leicht mit Stärke binden.",
+      "Mit grünen Frühlingszwiebeln servieren."
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Hell geschmorte Garnelen",
+    "originalTitle": "清烩虾仁",
+    "image": "/images/chinese-recipes/18-hell-geschmorte-garnelen.png",
+    "ingredients": [
+      "500 g geschälte Garnelen",
+      "200 g Bambussprossen",
+      "150 g Zuckerschoten",
+      "3 Frühlingszwiebeln",
+      "15 g Ingwer",
+      "2 Knoblauchzehen",
+      "300 ml klare Hühnerbrühe",
+      "1 EL Shaoxing-Reiswein",
+      "1 TL Speisestärke",
+      "1/2 TL weißer Pfeffer",
+      "2 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Garnelen trocken tupfen und leicht salzen.",
+      "Bambussprossen schneiden und Zuckerschoten putzen.",
+      "Garnelen kurz anbraten und herausnehmen.",
+      "Ingwer und Knoblauch kurz rösten.",
+      "Bambus und Zuckerschoten hinzufügen.",
+      "Mit Reiswein ablöschen und Brühe angießen.",
+      "Einige Minuten leise köcheln.",
+      "Garnelen zurückgeben und gar ziehen lassen.",
+      "Mit weißem Pfeffer würzen.",
+      "Sauce nur leicht mit Stärke binden und mit Frühlingszwiebeln servieren."
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Gedämpfter Silberkarpfen",
+    "originalTitle": "清蒸鲢鱼",
+    "image": "/images/chinese-recipes/19-gedaempfter-silberkarpfen.png",
+    "ingredients": [
+      "1 küchenfertiger Silberkarpfen, ca. 900 g",
+      "30 g Ingwer",
+      "4 Frühlingszwiebeln",
+      "3 EL helle Sojasauce",
+      "2 EL Shaoxing-Reiswein",
+      "1 TL Zucker",
+      "3 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch reinigen, trocken tupfen und auf beiden Seiten einschneiden.",
+      "Innen und außen leicht salzen und mit Reiswein einreiben.",
+      "Etwas Ingwer und Frühlingszwiebel in den Fisch legen.",
+      "Fisch auf einer hitzebeständigen Platte über kräftigem Dampf garen.",
+      "Je nach Größe etwa 12–18 Minuten dämpfen.",
+      "Entstandene Flüssigkeit vorsichtig abgießen.",
+      "Frischen Ingwer in feine Streifen schneiden und mit Frühlingszwiebeln auf dem Fisch verteilen.",
+      "Sojasauce mit Zucker verrühren und darübergeben.",
+      "Öl sehr heiß erhitzen und direkt über Ingwer und Frühlingszwiebeln gießen."
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Fisch mit Chili-Bohnenpaste nach Hausfrauenart",
+    "originalTitle": "家常豆瓣鱼",
+    "image": "/images/chinese-recipes/20-fisch-mit-chili-bohnenpaste-nach-hausfrauenart.png",
+    "ingredients": [
+      "1 ganzer küchenfertiger Fisch, ca. 800–1.000 g",
+      "2 EL Doubanjiang",
+      "4 Knoblauchzehen",
+      "20 g Ingwer",
+      "4 Frühlingszwiebeln",
+      "2 EL helle Sojasauce",
+      "2 EL Shaoxing-Reiswein",
+      "1 EL Reisessig",
+      "1 TL Zucker",
+      "300 ml Fisch- oder Hühnerbrühe",
+      "1 TL Speisestärke",
+      "3 EL neutrales Öl",
+      "Salz"
+    ],
+    "preparation": [
+      "Fisch trocken tupfen und auf beiden Seiten mehrfach einschneiden.",
+      "Leicht salzen und mit etwas Reiswein einreiben.",
+      "Fisch von beiden Seiten kräftig anbraten und herausnehmen.",
+      "Doubanjiang im verbliebenen Öl rösten, bis das Öl kräftig rot wird.",
+      "Ingwer und Knoblauch hinzufügen.",
+      "Sojasauce, Reiswein, Zucker und Brühe einrühren.",
+      "Fisch zurückgeben und 10–15 Minuten bei kleiner Hitze schmoren.",
+      "Fisch vorsichtig herausheben.",
+      "Sauce mit wenig Stärke leicht binden.",
+      "Essig und Frühlingszwiebeln einrühren.",
+      "Die kräftige rote Sauce über den Fisch geben."
+    ]
+  }
+]
