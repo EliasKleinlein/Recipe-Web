@@ -162,20 +162,14 @@ export default function KitchenMasterExperience({
         id="kuechenmeister"
         className="mx-auto max-w-[1500px] scroll-mt-28 px-5 pb-8 pt-20 sm:px-8 sm:pt-28"
       >
-        <div className="text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[.28em] text-[#dda64c]">
-            Vier Namen · Ein Renke
-          </p>
-          <h2 className="fantasy-title text-5xl font-bold leading-none text-[#fff0c5] sm:text-7xl">
-            Wähle deinen Küchenmeister
-          </h2>
-          <div className="ornament-divider mx-auto mt-5 max-w-xl">
-            <Sparkles size={17} />
-          </div>
-          <p className="mx-auto mt-5 max-w-2xl font-serif text-lg leading-8 text-[#cfc2aa]">
-            Jeder Meister bewacht einen anderen Flügel der Rezeptbibliothek.
-            Tippe auf ein Portal und die passenden Rezepte erscheinen.
-          </p>
+        <div className="mx-auto w-full max-w-[1100px]">
+          <Image
+            src="/images/ui/kuechenmeister-schild.png"
+            alt="Wähle deinen Küchenmeister"
+            width={2048}
+            height={640}
+            className="block h-auto w-full"
+          />
         </div>
 
         <div className="mt-12 grid items-end gap-5 sm:grid-cols-2 xl:grid-cols-4">

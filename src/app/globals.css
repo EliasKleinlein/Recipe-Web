@@ -207,31 +207,31 @@ body {
 
 /* RENKE – NEON ROT */
 #kuechenmeister .grid > button[data-master="renke"]:hover {
-  filter: brightness(1.07) saturate(1.08)
-    drop-shadow(0 0 5px rgba(255, 48, 48, 0.95))
-    drop-shadow(0 0 15px rgba(255, 48, 48, 0.8))
-    drop-shadow(0 0 32px rgba(255, 20, 20, 0.6));
+  filter: brightness(1.04) saturate(1.04)
+    drop-shadow(0 0 4px rgba(255, 48, 48, 0.65))
+    drop-shadow(0 0 10px rgba(255, 48, 48, 0.42))
+    drop-shadow(0 0 20px rgba(255, 20, 20, 0.28));
 }
 /* WALTER – NEON GOLD */
 #kuechenmeister .grid > button[data-master="walter"]:hover {
-  filter: brightness(1.07) saturate(1.08)
-    drop-shadow(0 0 5px rgba(255, 212, 92, 0.95))
-    drop-shadow(0 0 15px rgba(255, 190, 55, 0.8))
-    drop-shadow(0 0 32px rgba(255, 170, 20, 0.6));
+  filter: brightness(1.04) saturate(1.04)
+    drop-shadow(0 0 4px rgba(255, 212, 92, 0.65))
+    drop-shadow(0 0 10px rgba(255, 190, 55, 0.42))
+    drop-shadow(0 0 20px rgba(255, 170, 20, 0.28));
 }
 /* MALTE – NEON PINK */
 #kuechenmeister .grid > button[data-master="malte"]:hover {
-  filter: brightness(1.07) saturate(1.08)
-    drop-shadow(0 0 5px rgba(255, 70, 215, 0.95))
-    drop-shadow(0 0 15px rgba(255, 45, 190, 0.8))
-    drop-shadow(0 0 32px rgba(255, 20, 165, 0.6));
+  filter: brightness(1.04) saturate(1.04)
+    drop-shadow(0 0 4px rgba(255, 70, 215, 0.62))
+    drop-shadow(0 0 10px rgba(255, 45, 190, 0.38))
+    drop-shadow(0 0 20px rgba(255, 20, 165, 0.24));
 }
 /* MEISTER BRIXEL – NEON GRÜN */
 #kuechenmeister .grid > button[data-master="brixel"]:hover {
-  filter: brightness(1.07) saturate(1.08)
-    drop-shadow(0 0 5px rgba(57, 255, 20, 0.95))
-    drop-shadow(0 0 15px rgba(57, 255, 20, 0.8))
-    drop-shadow(0 0 32px rgba(30, 255, 60, 0.6));
+  filter: brightness(1.04) saturate(1.04)
+    drop-shadow(0 0 4px rgba(57, 255, 20, 0.62))
+    drop-shadow(0 0 10px rgba(57, 255, 20, 0.38))
+    drop-shadow(0 0 20px rgba(30, 255, 60, 0.24));
 }
 
 /* Zauberstaub rund um die Karte */
@@ -273,8 +273,8 @@ body {
     94% 27%,
     7% 52%;
 
-  filter: drop-shadow(0 0 3px rgba(255, 244, 190, 1))
-    drop-shadow(0 0 7px rgba(255, 194, 59, 0.9));
+  filter: drop-shadow(0 0 2px rgba(255, 244, 190, 0.7))
+    drop-shadow(0 0 4px rgba(255, 194, 59, 0.45));
 
   transform: translateY(8px) scale(0.96);
 }
@@ -288,8 +288,8 @@ body {
 }
 
 #kuechenmeister .grid > button:hover::before {
-  opacity: 1;
-  transform: scale(1.035);
+  opacity: 0.55;
+  transform: scale(1.015);
 }
 
 #kuechenmeister .grid > button:hover::after {
@@ -298,8 +298,8 @@ body {
 
 /* Auch die aktiv ausgewählte Karte darf leicht magisch bleiben */
 #kuechenmeister .grid > button[aria-pressed="true"]::before {
-  opacity: 0.65;
-  transform: scale(1.015);
+  opacity: 0.35;
+  transform: scale(1.008);
 }
 
 @keyframes renke-magic-dust {
@@ -309,16 +309,16 @@ body {
   }
 
   18% {
-    opacity: 0.7;
+    opacity: 0.30;
   }
 
   42% {
-    opacity: 1;
+    opacity: 0.48;
     transform: translateY(-3px) scale(1);
   }
 
   68% {
-    opacity: 0.85;
+    opacity: 0.36;
     transform: translateY(-12px) scale(1.02);
   }
 
@@ -477,4 +477,118 @@ a[data-master="cannabis"]:hover {
   .fantasy-shine-card:hover::after {
     animation: none !important;
   }
+}
+
+/* Küchenmeister-Schild unter dem Hero */
+#kuechenmeister {
+  position: relative;
+  z-index: 20;
+  margin-top: -125px;
+  padding-top: 0 !important;
+  overflow: visible;
+}
+
+/* Küchenmeister-Schild etwas tiefer */
+#kuechenmeister {
+  margin-top: -105px !important;
+}
+
+/* Küchenmeister-Schild finale Feinposition */
+#kuechenmeister {
+  margin-top: -90px !important;
+}
+
+/* =========================================================
+   Seitenhintergrund – Motiv wieder klar und erkennbar
+   ========================================================= */
+
+.fantasy-page {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 17, 0.02),
+      rgba(3, 9, 17, 0.10)
+    ),
+    url("/images/fantasy-page-backdrop.webp") !important;
+
+  background-size: 100vw auto !important;
+  background-position: center top !important;
+  background-repeat: repeat-y !important;
+  background-attachment: scroll !important;
+}
+
+/* Dunkle Vignette deutlich reduzieren */
+.fantasy-page::before {
+  background: radial-gradient(
+    circle at 50% 30%,
+    transparent 0 45%,
+    rgba(1, 5, 10, 0.10) 80%,
+    rgba(1, 5, 10, 0.18) 100%
+  ) !important;
+}
+
+.fantasy-page::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.10),
+    transparent 12%,
+    transparent 88%,
+    rgba(0, 0, 0, 0.10)
+  ) !important;
+}
+
+/* Hintergrund feststehen lassen */
+.fantasy-page {
+  background-attachment: fixed !important;
+}
+
+/* Hintergrund feststehen lassen */
+.fantasy-page {
+  background-attachment: fixed !important;
+}
+
+/* =========================================================
+   Fester Seitenhintergrund hinter der gesamten App
+   ========================================================= */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: #07111f;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -100;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 17, 0.02),
+      rgba(3, 9, 17, 0.10)
+    ),
+    url("/images/fantasy-page-backdrop.webp");
+
+  background-size: 100vw auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Die eigentliche App hat keinen eigenen Seitenhintergrund mehr */
+.fantasy-page {
+  position: relative;
+  z-index: 0;
+  background: transparent !important;
+  background-image: none !important;
+  background-attachment: initial !important;
+}
+
+/* alte Hintergrund-Overlays der fantasy-page aus */
+.fantasy-page::before,
+.fantasy-page::after {
+  display: none !important;
+  content: none !important;
 }
