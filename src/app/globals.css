@@ -592,3 +592,95 @@ body::before {
   display: none !important;
   content: none !important;
 }
+
+/* =========================================================
+   FINALER FESTER SEITENHINTERGRUND
+   Inhalt scrollt darüber, Hintergrund bleibt stehen
+   ========================================================= */
+
+html {
+  min-height: 100%;
+  background: #07111f;
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 17, 0.02),
+      rgba(3, 9, 17, 0.10)
+    ),
+    url("/images/fantasy-page-backdrop.webp") !important;
+
+  background-position: center top !important;
+  background-size: 100vw auto !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* App selbst bleibt transparent */
+.fantasy-page {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* alte Overlay-Hintergründe deaktivieren */
+.fantasy-page::before,
+.fantasy-page::after,
+body::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   Hintergrund über den kompletten sichtbaren Bildschirm
+   ========================================================= */
+
+body {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(3, 9, 17, 0.02),
+      rgba(3, 9, 17, 0.10)
+    ),
+    url("/images/fantasy-page-backdrop.webp") !important;
+
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+.fantasy-page {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Blauen Seitenhintergrund entfernen */
+html,
+body,
+.fantasy-page,
+main {
+  background-color: transparent !important;
+}
+
+/* sicherstellen, dass Bereiche keinen blauen Hintergrund erzwingen */
+#kuechenmeister,
+#rezepte {
+  background-color: transparent !important;
+}
+
+/* Blauen Seitenhintergrund entfernen */
+html,
+body,
+.fantasy-page,
+main {
+  background-color: transparent !important;
+}
+
+/* sicherstellen, dass Bereiche keinen blauen Hintergrund erzwingen */
+#kuechenmeister,
+#rezepte {
+  background-color: transparent !important;
+}
