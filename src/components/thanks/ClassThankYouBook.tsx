@@ -10,16 +10,16 @@ type Person = {
 };
 
 const people: Person[] = [
-  { id: "muju", name: "Muju", portrait: "/images/class/muju.png" },
+  { id: "muju", name: "Muju", portrait: "/images/class/muju.webp" },
   { id: "elias", name: "Elias", portrait: "/images/class/optimized/elias-robotik.webp" },
   { id: "eric", name: "Eric" },
-  { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.png" },
+  { id: "marco", name: "Marco", portrait: "/images/class/marco-stafford.webp" },
   { id: "christoph", name: "Christopher", portrait: "/images/class/optimized/christoph-matrix.webp" },
   { id: "kevin", name: "Kevin", portrait: "/images/class/optimized/kevin-leetcode.webp" },
   { id: "niko", name: "Niko", portrait: "/images/class/optimized/niko.webp" },
   { id: "marlin", name: "Marlin", portrait: "/images/class/optimized/marlin.webp" },
   { id: "daniel", name: "Daniel" },
-  { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.png" },
+  { id: "pavel", name: "Pavel", portrait: "/images/kitchen-masters/pavel.webp" },
 ];
 
 const names = people.map((person) => person.name).join(" · ");
@@ -170,7 +170,7 @@ export default function ClassThankYouBook() {
       <div className="relative h-full w-full overflow-hidden bg-[#ead8b5]">
         <div className="absolute bottom-0 left-0 top-0 -right-[36px]">
           <Image
-            src="/images/thanks/renke-dankesbuch-cover.png"
+            src="/images/thanks/renke-dankesbuch-cover.webp"
             alt="Widmungsseite Für Renke"
             fill
             priority
@@ -434,7 +434,7 @@ export default function ClassThankYouBook() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-80"
         style={{
-          backgroundImage: "url('/images/thanks/castle-library.png')",
+          backgroundImage: "url('/images/thanks/castle-library.webp')",
         }}
       />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,8,5,.28),rgba(20,10,6,.48)_55%,rgba(10,5,3,.72))]" />

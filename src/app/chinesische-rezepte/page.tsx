@@ -17,7 +17,7 @@ export default function ChineseRecipesPage() {
       <main className="relative">
         <section className="mx-auto max-w-[1500px] px-5 pb-6 pt-16 sm:px-8 sm:pb-8 sm:pt-24">
           <Image
-            src="/images/chinese-recipes-hero-night.png"
+            src="/images/chinese-recipes-hero-night.webp"
             alt="Chinesische Rezeptbibliothek"
             width={2161}
             height={728}

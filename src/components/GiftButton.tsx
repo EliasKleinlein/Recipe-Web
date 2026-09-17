@@ -18,7 +18,7 @@ export default function GiftButton() {
           <span className="absolute -bottom-[.7rem] left-4 h-6 w-7 -rotate-[28deg] bg-[#fff0c9] [clip-path:polygon(0_0,100%_0,0_100%)]" />
         </div>
         <Image
-          src="/images/CHR.png"
+          src="/images/CHR.webp"
           alt="Der kleine Küchendrache Christophus"
           fill
           sizes="112px"
@@ -32,7 +32,7 @@ export default function GiftButton() {
         className="group relative block h-28 w-36 shrink-0 transition duration-300 hover:-translate-y-2 hover:rotate-3 hover:scale-105 focus-visible:rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f1c76c]"
       >
         <Image
-          src="/images/magietrank-kessel-button.png"
+          src="/images/magietrank-kessel-button.webp"
           alt=""
           fill
           sizes="144px"
