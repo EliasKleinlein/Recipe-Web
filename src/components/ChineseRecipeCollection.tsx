@@ -39,7 +39,7 @@ export default function ChineseRecipeCollection({
             key={recipe.id}
             type="button"
             onClick={() => setActiveRecipe(recipe)}
-            className="paper-panel fantasy-shine-card group block overflow-hidden rounded-[1.6rem] border border-[#8f291f]/60 text-left shadow-[0_18px_45px_rgba(0,0,0,.35)] transition duration-300 hover:-translate-y-2 hover:rotate-[.25deg] hover:shadow-[0_24px_55px_rgba(196,42,27,.24)]"
+            className="chinese-recipe-card paper-panel fantasy-shine-card group flex flex-col overflow-hidden rounded-[1.6rem] border border-[#8f291f]/60 text-left shadow-[0_18px_45px_rgba(0,0,0,.35)] transition duration-300 hover:-translate-y-2 hover:rotate-[.25deg]"
           >
             <div className="relative aspect-[4/3] overflow-hidden border-b border-[#8f291f]/35 bg-[#24100c]">
               <Image

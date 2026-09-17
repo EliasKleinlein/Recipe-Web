@@ -343,7 +343,8 @@ body {
 }
 
 /* RENKE – ROT */
-a[data-master="renke"]:hover {
+a[data-master="renke"]:hover,
+.chinese-recipe-card:hover {
   border-color: #ff3030 !important;
   box-shadow:
     0 0 4px #ff3030,
