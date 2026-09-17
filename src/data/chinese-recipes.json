@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Schweinefleisch mit Mu-Err-Pilzen",
     "originalTitle": "木耳肉片",
-    "image": "/images/chinese-recipes/01-schweinefleisch-mit-mu-err-pilzen.png",
+    "image": "/images/chinese-recipes/01-schweinefleisch-mit-mu-err-pilzen.webp",
     "ingredients": [
       "400 g Schweinefilet oder Schweinerücken",
       "25 g getrocknete Mu-Err-Pilze",
@@ -31,7 +31,7 @@
     "id": 2,
     "title": "Schweinefleisch mit Gurke",
     "originalTitle": "黄瓜肉片",
-    "image": "/images/chinese-recipes/02-schweinefleisch-mit-gurke.png",
+    "image": "/images/chinese-recipes/02-schweinefleisch-mit-gurke.webp",
     "ingredients": [
       "400 g Schweinefilet oder Schweinerücken",
       "1 große Salatgurke",
@@ -59,7 +59,7 @@
     "id": 3,
     "title": "Trocken gebratene Bittermelone",
     "originalTitle": "干煸苦瓜",
-    "image": "/images/chinese-recipes/03-trocken-gebratene-bittermelone.png",
+    "image": "/images/chinese-recipes/03-trocken-gebratene-bittermelone.webp",
     "ingredients": [
       "2 Bittermelonen, ca. 450–500 g",
       "150 g Schweinehackfleisch",
@@ -87,7 +87,7 @@
     "id": 4,
     "title": "Süß-sauer geschmorter Chinakohl",
     "originalTitle": "醋熘白菜",
-    "image": "/images/chinese-recipes/04-suess-sauer-geschmorter-chinakohl.png",
+    "image": "/images/chinese-recipes/04-suess-sauer-geschmorter-chinakohl.webp",
     "ingredients": [
       "700 g Chinakohl",
       "1 große Karotte",
@@ -114,7 +114,7 @@
     "id": 5,
     "title": "Mapo Tofu",
     "originalTitle": "麻婆豆腐",
-    "image": "/images/chinese-recipes/05-mapo-tofu.png",
+    "image": "/images/chinese-recipes/05-mapo-tofu.webp",
     "ingredients": [
       "450 g weicher bis mittelfester Tofu",
       "180 g Schweinehackfleisch",
@@ -144,7 +144,7 @@
     "id": 6,
     "title": "Trocken gebratene grüne Bohnen",
     "originalTitle": "干煸四季豆",
-    "image": "/images/chinese-recipes/06-trocken-gebratene-gruene-bohnen.png",
+    "image": "/images/chinese-recipes/06-trocken-gebratene-gruene-bohnen.webp",
     "ingredients": [
       "500 g grüne Bohnen",
       "150 g Schweinehackfleisch",
@@ -171,7 +171,7 @@
     "id": 7,
     "title": "Fisch mit eingelegtem Gemüse",
     "originalTitle": "泡菜鱼",
-    "image": "/images/chinese-recipes/07-fisch-mit-eingelegtem-gemuese.png",
+    "image": "/images/chinese-recipes/07-fisch-mit-eingelegtem-gemuese.webp",
     "ingredients": [
       "600 g festes weißes Fischfilet",
       "250 g eingelegtes Senfgemüse oder Suancai",
@@ -202,7 +202,7 @@
     "id": 8,
     "title": "Eichhörnchen-Fisch",
     "originalTitle": "松鼠鱼",
-    "image": "/images/chinese-recipes/08-eichhoernchen-fisch.png",
+    "image": "/images/chinese-recipes/08-eichhoernchen-fisch.webp",
     "ingredients": [
       "1 ganzer küchenfertiger Fisch, ca. 900 g",
       "100 g Speisestärke",
@@ -236,7 +236,7 @@
     "id": 9,
     "title": "Scharfer Chili-Fisch",
     "originalTitle": "辣子鱼",
-    "image": "/images/chinese-recipes/09-scharfer-chili-fisch.png",
+    "image": "/images/chinese-recipes/09-scharfer-chili-fisch.webp",
     "ingredients": [
       "700 g festes Fischfilet",
       "12 getrocknete rote Chilischoten",
@@ -266,7 +266,7 @@
     "id": 10,
     "title": "Seegurke nach Hausfrauenart",
     "originalTitle": "家常海参",
-    "image": "/images/chinese-recipes/10-seegurke-nach-hausfrauenart.png",
+    "image": "/images/chinese-recipes/10-seegurke-nach-hausfrauenart.webp",
     "ingredients": [
       "500 g küchenfertige eingeweichte Seegurke",
       "6 Shiitake",
@@ -298,7 +298,7 @@
     "id": 11,
     "title": "Rot geschmorter Silberkarpfen",
     "originalTitle": "红烧鲢鱼",
-    "image": "/images/chinese-recipes/11-rot-geschmorter-silberkarpfen.png",
+    "image": "/images/chinese-recipes/11-rot-geschmorter-silberkarpfen.webp",
     "ingredients": [
       "1 küchenfertiger Silberkarpfen, ca. 900 g",
       "4 Frühlingszwiebeln",
@@ -329,7 +329,7 @@
     "id": 12,
     "title": "Fischkopf im Tontopf",
     "originalTitle": "砂锅鱼头",
-    "image": "/images/chinese-recipes/12-fischkopf-im-tontopf.png",
+    "image": "/images/chinese-recipes/12-fischkopf-im-tontopf.webp",
     "ingredients": [
       "1 großer Fischkopf, ca. 900–1.000 g",
       "300 g Tofu",
@@ -362,7 +362,7 @@
     "id": 13,
     "title": "Jade-Garnelen",
     "originalTitle": "翡翠虾仁",
-    "image": "/images/chinese-recipes/13-jade-garnelen.png",
+    "image": "/images/chinese-recipes/13-jade-garnelen.webp",
     "ingredients": [
       "450 g geschälte Garnelen",
       "1 kleine Salatgurke",
@@ -394,7 +394,7 @@
     "id": 14,
     "title": "Fünf-Gewürze-Aal",
     "originalTitle": "五香鳝片",
-    "image": "/images/chinese-recipes/14-fuenf-gewuerze-aal.png",
+    "image": "/images/chinese-recipes/14-fuenf-gewuerze-aal.webp",
     "ingredients": [
       "600 g küchenfertiger Aal",
       "2 Sternanis",
@@ -425,7 +425,7 @@
     "id": 15,
     "title": "Aalstreifen mit grünem Paprika",
     "originalTitle": "青椒鳝丝",
-    "image": "/images/chinese-recipes/15-aalstreifen-mit-gruenem-paprika.png",
+    "image": "/images/chinese-recipes/15-aalstreifen-mit-gruenem-paprika.webp",
     "ingredients": [
       "500 g Aalfilet",
       "2 große grüne Paprika",
@@ -454,7 +454,7 @@
     "id": 16,
     "title": "Knusprig gebratene Garnelen",
     "originalTitle": "生爆虾仁",
-    "image": "/images/chinese-recipes/16-knusprig-gebratene-garnelen.png",
+    "image": "/images/chinese-recipes/16-knusprig-gebratene-garnelen.webp",
     "ingredients": [
       "500 g große geschälte Garnelen",
       "2 EL Speisestärke",
@@ -482,7 +482,7 @@
     "id": 17,
     "title": "Garnelen mit Tomate",
     "originalTitle": "番茄虾仁",
-    "image": "/images/chinese-recipes/17-garnelen-mit-tomate.png",
+    "image": "/images/chinese-recipes/17-garnelen-mit-tomate.webp",
     "ingredients": [
       "500 g geschälte Garnelen",
       "500 g reife Tomaten",
@@ -513,7 +513,7 @@
     "id": 18,
     "title": "Hell geschmorte Garnelen",
     "originalTitle": "清烩虾仁",
-    "image": "/images/chinese-recipes/18-hell-geschmorte-garnelen.png",
+    "image": "/images/chinese-recipes/18-hell-geschmorte-garnelen.webp",
     "ingredients": [
       "500 g geschälte Garnelen",
       "200 g Bambussprossen",
@@ -545,7 +545,7 @@
     "id": 19,
     "title": "Gedämpfter Silberkarpfen",
     "originalTitle": "清蒸鲢鱼",
-    "image": "/images/chinese-recipes/19-gedaempfter-silberkarpfen.png",
+    "image": "/images/chinese-recipes/19-gedaempfter-silberkarpfen.webp",
     "ingredients": [
       "1 küchenfertiger Silberkarpfen, ca. 900 g",
       "30 g Ingwer",
@@ -572,7 +572,7 @@
     "id": 20,
     "title": "Fisch mit Chili-Bohnenpaste nach Hausfrauenart",
     "originalTitle": "家常豆瓣鱼",
-    "image": "/images/chinese-recipes/20-fisch-mit-chili-bohnenpaste-nach-hausfrauenart.png",
+    "image": "/images/chinese-recipes/20-fisch-mit-chili-bohnenpaste-nach-hausfrauenart.webp",
     "ingredients": [
       "1 ganzer küchenfertiger Fisch, ca. 800–1.000 g",
       "2 EL Doubanjiang",
