@@ -1,3 +1,4 @@
+import ScrollToTop from "@/components/ScrollToTop";
 import FantasyFooter from "@/components/FantasyFooter";
 import Navbar from "@/components/Navbar";
 import RenkeRecipeTip from "@/components/RenkeRecipeTip";
@@ -21,9 +22,16 @@ export default async function RecipeDetailPage({ params }: Props) {
 
   return (
     <div className="fantasy-page">
+      <ScrollToTop />
       <Navbar />
       <main className="mx-auto max-w-7xl px-3 py-12 sm:px-8 sm:py-20">
-        <Link href="/#rezepte" className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-[#e8bd68] hover:text-[#ffe09a]"><ArrowLeft size={17} /> Zurück zu den Rezepten</Link>
+        <Link
+          href="/#rezepte"
+          className="relative z-[100] mb-8 inline-flex items-center gap-3 rounded-xl border-2 border-[#9b632d] bg-[linear-gradient(180deg,#8b5a2b_0%,#5b351b_52%,#351c0d_100%)] px-7 py-3 font-serif text-lg font-bold text-[#ffe4a3] shadow-[0_5px_0_#211007,0_10px_22px_rgba(0,0,0,.55),inset_0_1px_0_rgba(255,225,160,.35)] transition hover:-translate-y-1 hover:border-[#e0ad52] hover:text-[#fff3c8]"
+        >
+          <ArrowLeft size={21} />
+          Zurück zu den Rezepten
+        </Link>
         <article className="relative isolate mx-auto max-w-5xl overflow-hidden rounded-[2rem] px-[9%] py-[10%] shadow-[0_30px_80px_rgba(0,0,0,.58)] sm:px-[11%] sm:py-[9%]">
           <Image
             src="/images/recipe-parchment.webp"
