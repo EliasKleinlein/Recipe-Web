@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto flex w-full justify-center px-4 py-8 sm:px-6">
+    <section className="relative mx-auto mt-[20px] flex w-full justify-center px-4 py-8 sm:mt-[40px] sm:px-6 lg:mt-[60px]">
       <Image
         src="/images/hero/renkes-kochbuch-container-neu-final.png"
         alt="Renkes Kochbuch mit Renke und Christophus"

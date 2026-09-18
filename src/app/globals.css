@@ -685,3 +685,13 @@ main {
 #rezepte {
   background-color: transparent !important;
 }
+
+/* Mehr Abstand zwischen Header-Schild und Hero */
+.fantasy-page main > section:first-of-type {
+  padding-top: 30px;
+}
+
+/* Mehr Abstand zwischen Navbar und Hero-Container */
+.fantasy-page main > section:first-of-type {
+  margin-top: 60px !important;
+}
