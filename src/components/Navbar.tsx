@@ -17,7 +17,11 @@ export default function Navbar() {
       >
         <Link
           href="/"
+<<<<<<< HEAD
           className="group absolute left-1/2 top-[calc(31%+12px)] z-10 aspect-[1978/653] w-[45%] origin-[81%_18%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[40%] transition-transform duration-500 ease-out hover:-rotate-[4deg]"
+=======
+          className="group absolute left-1/2 top-[calc(31%+284px)] z-10 aspect-[1978/653] w-[45%] origin-[81%_18%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[40%] transition-transform duration-500 ease-out hover:-rotate-[4deg]"
+>>>>>>> main
           aria-label="Renkes Kochbuch – Startseite"
         >
           <Image
